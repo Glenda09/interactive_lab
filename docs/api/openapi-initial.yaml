@@ -1,0 +1,377 @@
+openapi: 3.1.0
+info:
+  title: Interactive Lab API
+  version: 0.1.0
+  description: Contrato inicial para la plataforma de capacitacion virtual con simulacion 3D.
+servers:
+  - url: http://localhost:3000/api/v1
+tags:
+  - name: health
+  - name: auth
+  - name: users
+  - name: courses
+  - name: scenarios
+  - name: simulation-sessions
+paths:
+  /health:
+    get:
+      tags: [health]
+      summary: Health check del backend
+      responses:
+        "200":
+          description: Servicio activo
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+  /auth/login:
+    post:
+      tags: [auth]
+      summary: Autenticar usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        "200":
+          description: Tokens emitidos correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthTokens"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /auth/refresh:
+    post:
+      tags: [auth]
+      summary: Renovar access token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RefreshRequest"
+      responses:
+        "200":
+          description: Tokens renovados
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthTokens"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /me:
+    get:
+      tags: [users]
+      summary: Perfil del usuario autenticado
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Perfil actual
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserProfile"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /users:
+    get:
+      tags: [users]
+      summary: Listar usuarios
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Usuarios disponibles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/UserProfile"
+  /courses:
+    get:
+      tags: [courses]
+      summary: Listar cursos
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Cursos base
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Course"
+  /scenarios:
+    get:
+      tags: [scenarios]
+      summary: Listar escenarios publicados
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Escenarios disponibles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Scenario"
+  /simulation-sessions:
+    post:
+      tags: [simulation-sessions]
+      summary: Crear sesion de simulacion
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateSimulationSession"
+      responses:
+        "200":
+          description: Sesion creada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SimulationSession"
+  /simulation-sessions/{id}/events/bulk:
+    post:
+      tags: [simulation-sessions]
+      summary: Registrar eventos de simulacion
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SessionEventBatch"
+      responses:
+        "200":
+          description: Eventos aceptados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sessionId:
+                    type: string
+                  received:
+                    type: integer
+  /simulation-sessions/{id}/complete:
+    post:
+      tags: [simulation-sessions]
+      summary: Cerrar sesion de simulacion
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Sesion cerrada
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SimulationSession"
+  /simulation-sessions/{id}/results:
+    get:
+      tags: [simulation-sessions]
+      summary: Consultar resumen de resultados
+      security:
+        - bearerAuth: []
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Resumen de la sesion
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SimulationResultSummary"
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    SessionId:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Token ausente o invalido
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              statusCode:
+                type: integer
+              message:
+                type: string
+              error:
+                type: string
+  schemas:
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        service:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+    RefreshRequest:
+      type: object
+      required: [refreshToken]
+      properties:
+        refreshToken:
+          type: string
+    UserProfile:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+          format: email
+        fullName:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+        permissions:
+          type: array
+          items:
+            type: string
+    AuthTokens:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+        tokenType:
+          type: string
+        expiresIn:
+          type: string
+        user:
+          $ref: "#/components/schemas/UserProfile"
+    Course:
+      type: object
+      properties:
+        id:
+          type: string
+        code:
+          type: string
+        title:
+          type: string
+        status:
+          type: string
+        modules:
+          type: integer
+        estimatedDurationHours:
+          type: integer
+    Scenario:
+      type: object
+      properties:
+        id:
+          type: string
+        code:
+          type: string
+        title:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+        engineVersion:
+          type: string
+    CreateSimulationSession:
+      type: object
+      required: [scenarioId]
+      properties:
+        scenarioId:
+          type: string
+        courseId:
+          type: string
+        moduleId:
+          type: string
+    SimulationSession:
+      type: object
+      properties:
+        id:
+          type: string
+        userId:
+          type: string
+        scenarioId:
+          type: string
+        courseId:
+          type: string
+          nullable: true
+        moduleId:
+          type: string
+          nullable: true
+        status:
+          type: string
+        startedAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+          nullable: true
+    SessionEvent:
+      type: object
+      required: [type, detail]
+      properties:
+        type:
+          type: string
+        detail:
+          type: string
+    SessionEventBatch:
+      type: object
+      required: [events]
+      properties:
+        events:
+          type: array
+          items:
+            $ref: "#/components/schemas/SessionEvent"
+    SimulationResultSummary:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        status:
+          type: string
+        eventCount:
+          type: integer
+        lastEventAt:
+          type: string
+          format: date-time
+          nullable: true
