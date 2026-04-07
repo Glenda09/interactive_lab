@@ -1,0 +1,43 @@
+{
+  "name": "interactive-lab-frontend",
+  "version": "1.0.0",
+  "description": "Frontend React + Babylon.js de la Plataforma de Capacitación Virtual con Simulación 3D",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/ --ext .js,.jsx",
+    "lint:fix": "eslint src/ --ext .js,.jsx --fix",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^6.48.0",
+    "@babylonjs/loaders": "^6.48.0",
+    "@babylonjs/materials": "^6.48.0",
+    "@babylonjs/inspector": "^6.48.0",
+    "@reduxjs/toolkit": "^2.2.0",
+    "axios": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^14.2.0",
+    "@testing-library/user-event": "^14.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}

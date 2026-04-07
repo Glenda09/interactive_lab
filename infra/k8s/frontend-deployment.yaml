@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: interactive-lab
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interactive-lab
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: interactive-lab
+        tier: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: interactive-lab-frontend:1.0.0  # Replace with your actual image tag
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: interactive-lab
+    tier: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

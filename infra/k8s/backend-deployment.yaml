@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: interactive-lab
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interactive-lab
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: interactive-lab
+        tier: backend
+    spec:
+      containers:
+        - name: backend
+          image: interactive-lab-backend:1.0.0  # Replace with your actual image tag
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NODE_ENV
+              value: "production"
+            - name: PORT
+              value: "5000"
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secrets
+                  key: mongodb-uri
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secrets
+                  key: jwt-secret
+          resources:
+            requests:
+              cpu: "150m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: interactive-lab
+    tier: backend
+  ports:
+    - port: 5000
+      targetPort: 5000
+  type: ClusterIP
