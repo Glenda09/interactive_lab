@@ -1,5 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
+import { ConfigService } from "@nestjs/config";
+import { MongooseModule } from "@nestjs/mongoose";
 import { PassportModule } from "@nestjs/passport";
 import configuration from "./config/env.configuration.js";
 import { HealthController } from "./modules/health/health.controller.js";
@@ -14,6 +16,12 @@ import { SimulationSessionsModule } from "./modules/simulation-sessions/simulati
     ConfigModule.forRoot({
       isGlobal: true,
       load: [configuration]
+    }),
+    MongooseModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        uri: configService.getOrThrow<string>("database.mongoUri")
+      })
     }),
     PassportModule.register({ defaultStrategy: "jwt" }),
     IamModule,
