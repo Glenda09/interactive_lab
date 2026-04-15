@@ -266,7 +266,6 @@ const primaryNavigationItems = [
     path: "/users",
     label: "Usuarios",
     title: "Usuarios",
-    subtitle: "Administra accesos, credenciales y estados de cuenta del sistema.",
     icon: UsersIcon
   },
   {
