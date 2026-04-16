@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, Inject, Param, Post, UseGuards } from "@nestjs/common";
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from "@nestjs/swagger";
 import { CurrentUser } from "../../shared/auth/current-user.decorator.js";
 import { JwtAuthGuard } from "../../shared/auth/jwt-auth.guard.js";
@@ -12,7 +12,10 @@ import { SimulationSessionsService } from "./simulation-sessions.service.js";
 @UseGuards(JwtAuthGuard)
 @Controller("simulation-sessions")
 export class SimulationSessionsController {
-  constructor(private readonly simulationSessionsService: SimulationSessionsService) {}
+  constructor(
+    @Inject(SimulationSessionsService)
+    private readonly simulationSessionsService: SimulationSessionsService
+  ) {}
 
   @Post()
   @ApiOkResponse({ description: "Crea una sesion de simulacion." })
@@ -41,4 +44,3 @@ export class SimulationSessionsController {
     return this.simulationSessionsService.getResults(id);
   }
 }
-

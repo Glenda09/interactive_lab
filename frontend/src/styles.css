@@ -18,6 +18,11 @@
   --brand-panel: #163a63;
   --brand-accent: #2ec5ce;
   --brand-accent-strong: #1e97ae;
+  --admin-accent: #4a6f98;
+  --admin-accent-strong: #355579;
+  --avatar-soft: #e7eef7;
+  --avatar-soft-strong: #d7e3f2;
+  --avatar-ink: #486789;
   --success-soft: #e8fff2;
   --success-ink: #197147;
   --danger-soft: #fff1ec;
@@ -367,8 +372,8 @@ button {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2ec5ce 0%, #1e97ae 100%);
-  color: #f4feff;
+  background: linear-gradient(135deg, var(--avatar-soft) 0%, var(--avatar-soft-strong) 100%);
+  color: var(--avatar-ink);
   font-weight: 800;
 }
 
@@ -1063,6 +1068,8 @@ button {
 
 .users-create-button {
   white-space: nowrap;
+  background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-strong) 100%);
+  box-shadow: 0 14px 32px rgba(53, 85, 121, 0.2);
 }
 
 .users-filter-tabs {
@@ -1320,8 +1327,8 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f1f6fb 0%, #dce9f7 100%);
-  color: #17385a;
+  background: linear-gradient(135deg, var(--avatar-soft) 0%, var(--avatar-soft-strong) 100%);
+  color: var(--avatar-ink);
   font-size: 0.84rem;
   font-weight: 800;
   flex: 0 0 auto;
@@ -1404,6 +1411,11 @@ button {
 
 :root[data-theme="dark"] {
   color-scheme: dark;
+  --admin-accent: #5878a2;
+  --admin-accent-strong: #3f5c82;
+  --avatar-soft: #20344a;
+  --avatar-soft-strong: #29425d;
+  --avatar-ink: #edf4ff;
 }
 
 :root[data-theme="dark"] body {
@@ -1441,6 +1453,11 @@ button {
 :root[data-theme="dark"] .theme-toggle-button.is-active {
   background: linear-gradient(135deg, #1a3250 0%, #1f4a73 72%, #2aa8bf 100%);
   color: #f4feff;
+}
+
+:root[data-theme="dark"] .users-create-button {
+  background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-strong) 100%);
+  box-shadow: 0 14px 32px rgba(20, 34, 52, 0.34);
 }
 
 :root[data-theme="dark"] .sidebar-section-label,
@@ -1629,8 +1646,8 @@ button {
 }
 
 :root[data-theme="dark"] .user-avatar-chip {
-  background: linear-gradient(135deg, #1b2d42 0%, #21405f 100%);
-  color: #eff6ff;
+  background: linear-gradient(135deg, var(--avatar-soft) 0%, var(--avatar-soft-strong) 100%);
+  color: var(--avatar-ink);
 }
 
 :root[data-theme="dark"] .row-action-button.is-danger {

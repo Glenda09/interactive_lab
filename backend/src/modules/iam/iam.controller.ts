@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, Post, Req, UseGuards } from "@nestjs/common";
+import { Body, Controller, HttpCode, Inject, Post, Req, UseGuards } from "@nestjs/common";
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from "@nestjs/swagger";
 import { FastifyRequest } from "fastify";
 import { CurrentUser } from "../../shared/auth/current-user.decorator.js";
@@ -15,7 +15,7 @@ import { IamService } from "./iam.service.js";
 @ApiTags("auth")
 @Controller("auth")
 export class IamController {
-  constructor(private readonly iamService: IamService) {}
+  constructor(@Inject(IamService) private readonly iamService: IamService) {}
 
   @Post("login")
   @HttpCode(200)

@@ -348,8 +348,6 @@ export function UserManagementPage() {
         <div className="users-showcase-header">
           <div className="users-title-block">
             <p className="eyebrow">Administracion de usuarios</p>
-            <h2>Usuarios</h2>
-            <p>{filteredUsers.length} usuarios encontrados</p>
           </div>
 
           <div className="users-header-actions">
@@ -624,7 +622,7 @@ export function UserManagementPage() {
 
               <div className="user-form-actions">
                 <button
-                  className="primary-button"
+                  className="primary-button users-create-button"
                   disabled={createUserMutation.isPending || updateUserMutation.isPending}
                   type="submit"
                 >

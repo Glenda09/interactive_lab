@@ -142,7 +142,7 @@ export function LoginPage() {
             </div>
           )}
 
-          <button className="primary-button" disabled={loginMutation.isPending} type="submit">
+          <button className="primary-button users-create-button" disabled={loginMutation.isPending} type="submit">
             {loginMutation.isPending ? "Validando acceso..." : "Iniciar sesion"}
           </button>
         </form>

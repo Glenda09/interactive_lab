@@ -63,6 +63,7 @@ export class UsersService implements OnModuleInit {
   constructor(
     @Inject(ConfigService)
     private readonly configService: ConfigService,
+    @Inject(MailService)
     private readonly mailService: MailService,
     @InjectModel(PlatformUserModel.name)
     private readonly userModel: Model<PlatformUserDocument>,

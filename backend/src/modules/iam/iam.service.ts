@@ -34,10 +34,13 @@ export class IamService {
   private dummyPasswordHash = "";
 
   constructor(
+    @Inject(JwtService)
     private readonly jwtService: JwtService,
     @Inject(ConfigService)
     private readonly configService: ConfigService,
+    @Inject(UsersService)
     private readonly usersService: UsersService,
+    @Inject(MailService)
     private readonly mailService: MailService,
     @InjectModel(AuthRefreshToken.name)
     private readonly refreshTokenModel: Model<AuthRefreshTokenDocument>,
