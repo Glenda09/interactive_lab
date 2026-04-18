@@ -47,6 +47,26 @@ Compilar ambos paquetes:
 npm run build
 ```
 
+## MongoDB con Docker (recomendado)
+
+Construir y levantar MongoDB:
+
+```bash
+docker compose -f docker-compose.mongo.yml up -d --build
+```
+
+Ver estado:
+
+```bash
+docker ps --filter "name=interactive-lab-mongo"
+```
+
+Detener MongoDB:
+
+```bash
+docker compose -f docker-compose.mongo.yml down
+```
+
 ## Credenciales demo del backend
 
 - `admin@interactive-lab.local` / `ChangeMe123!`
