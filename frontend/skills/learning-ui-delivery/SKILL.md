@@ -1,39 +1,39 @@
-# Learning UI Delivery
+# Entrega De UI De Aprendizaje
 
-## Use this skill when
+## Usa esta skill cuando
 
-- building dashboards, course views, progress screens, or assessment flows,
-- adding forms and tables for academic or administrative operations,
-- shaping UX for learners, instructors, or supervisors.
+- construyas dashboards, vistas de cursos, pantallas de progreso o flujos de evaluacion,
+- agregues formularios y tablas para operaciones academicas o administrativas,
+- definas UX para aprendices, instructores o supervisores.
 
-## Outcome
+## Resultado
 
-Deliver a frontend slice that is consistent, role-aware, testable, and aligned with the training domain.
+Entregar una seccion frontend consistente, consciente de roles, testeable y alineada con el dominio de capacitacion.
 
-## Workflow
+## Flujo de trabajo
 
-1. Identify the actor:
-   - learner
+1. Identificar el actor:
+   - aprendiz
    - instructor
    - supervisor
-   - administrator
-2. Identify the primary decision the screen helps the actor make.
-3. Define the data contract needed from the API.
-4. Design the success, loading, empty, error, and permission-denied states.
-5. Implement queries, mutations, forms, and UI feedback with minimal coupling.
+   - administrador
+2. Identificar la decision principal que la pantalla ayuda a tomar al actor.
+3. Definir el contrato de datos necesario desde la API.
+4. Disenar los estados de exito, carga, vacio, error y permiso denegado.
+5. Implementar queries, mutaciones, formularios y feedback de UI con acoplamiento minimo.
 
-## Rules
+## Reglas
 
-- Make role-specific visibility explicit in the UI layer, but never treat it as the security boundary.
-- Prefer clear progress indicators over decorative complexity.
-- Keep tables, filters, and forms reusable across modules where it makes sense.
-- Avoid burying operationally important data behind too many interactions.
-- Favor explicit labels and audit-friendly wording for actions like publish, approve, reassign, or override.
+- Haz explicita la visibilidad por rol en la capa de UI, pero nunca la trates como frontera de seguridad.
+- Prefiere indicadores de progreso claros sobre complejidad decorativa.
+- Mantener tablas, filtros y formularios reutilizables entre modulos cuando tenga sentido.
+- Evita ocultar datos operativamente importantes detras de demasiadas interacciones.
+- Favorece etiquetas explicitas y redaccion apta para auditoria en acciones como publicar, aprobar, reasignar o sobrescribir.
 
-## Review checklist
+## Checklist de revision
 
-- Does the screen support the actor's main task with minimal friction?
-- Are validation and field-level errors clear?
-- Are destructive or sensitive actions confirmed?
-- Is the state model simple enough to maintain?
-- Can the backend contract evolve without breaking every component?
+- La pantalla soporta la tarea principal del actor con friccion minima?
+- Son claros los errores de validacion y a nivel de campo?
+- Las acciones destructivas o sensibles requieren confirmacion?
+- El modelo de estado es lo suficientemente simple para mantenerse?
+- El contrato del backend puede evolucionar sin romper todos los componentes?

@@ -1,40 +1,40 @@
-# Security RBAC Hardening
+# Endurecimiento De Seguridad RBAC
 
-## Use this skill when
+## Usa esta skill cuando
 
-- implementing authentication or session flows,
-- adding or changing protected endpoints,
-- modifying role or permission behavior,
-- reviewing data exposure, audit, or abuse protection.
+- implementes flujos de autenticacion o sesion,
+- agregues o cambies endpoints protegidos,
+- modifiques comportamiento de roles o permisos,
+- revises exposicion de datos, auditoria o proteccion contra abuso.
 
-## Outcome
+## Resultado
 
-Deliver a backend change that strengthens authentication, authorization, auditability, and abuse resistance.
+Entregar un cambio backend que fortalezca autenticacion, autorizacion, auditabilidad y resistencia al abuso.
 
-## Workflow
+## Flujo de trabajo
 
-1. Identify the protected resource and action.
-2. Define which roles, permissions, and ownership rules apply.
-3. Validate the request surface:
+1. Identificar el recurso protegido y la accion.
+2. Definir que roles, permisos y reglas de propiedad aplican.
+3. Validar la superficie de la solicitud:
    - headers
    - params
    - query
    - body
-4. Define rate limits and misuse cases.
-5. Add or update audit events and secure error handling.
+4. Definir limites de tasa y casos de mal uso.
+5. Agregar o actualizar eventos de auditoria y manejo seguro de errores.
 
-## Rules
+## Reglas
 
-- Never trust role hints from the frontend without backend verification.
-- Use least privilege defaults.
-- Do not expose whether a protected resource exists when the caller lacks access, unless the product explicitly needs that distinction.
-- Avoid returning sensitive operational metadata in error responses.
-- Rotate refresh tokens and revoke on logout or password change.
+- Nunca confiar en pistas de rol provenientes del frontend sin verificacion en backend.
+- Usar por defecto el principio de minimo privilegio.
+- No exponer si un recurso protegido existe cuando quien llama no tiene acceso, salvo que el producto necesite explicitamente esa distincion.
+- Evitar devolver metadatos operativos sensibles en respuestas de error.
+- Rotar refresh tokens y revocarlos en logout o cambio de contrasena.
 
-## Review checklist
+## Checklist de revision
 
-- What stops a lower-privilege user from calling this path?
-- What prevents brute force or spam on this endpoint?
-- What audit trail is generated?
-- What secrets or tokens could leak here?
-- What data should be redacted from logs and responses?
+- Que impide que un usuario de menor privilegio invoque esta ruta?
+- Que previene fuerza bruta o spam en este endpoint?
+- Que rastro de auditoria se genera?
+- Que secretos o tokens podrian filtrarse aqui?
+- Que datos deben redactarse en logs y respuestas?

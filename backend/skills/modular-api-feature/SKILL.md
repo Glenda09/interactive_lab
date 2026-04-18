@@ -1,36 +1,36 @@
-# Modular API Feature
+# Feature API Modular
 
-## Use this skill when
+## Usa esta skill cuando
 
-- adding a new backend module,
-- implementing a REST resource,
-- extending a domain service,
-- designing a feature that touches persistence, validation, and policy checks.
+- agregues un nuevo modulo backend,
+- implementes un recurso REST,
+- extiendas un servicio de dominio,
+- disenes un feature que toque persistencia, validacion y chequeos de politicas.
 
-## Outcome
+## Resultado
 
-Deliver a backend feature that fits a modular monolith and keeps clear ownership of rules, data, and API behavior.
+Entregar un feature backend que encaje en un monolito modular y mantenga propiedad clara de reglas, datos y comportamiento de API.
 
-## Workflow
+## Flujo de trabajo
 
-1. Define the owning module.
-2. Write the use cases the module must support.
-3. Identify input DTOs, output DTOs, domain services, repositories, and policy checks.
-4. Define audit events and error cases before writing endpoint code.
-5. Add tests for domain rules and integration paths.
+1. Definir el modulo propietario.
+2. Escribir los casos de uso que el modulo debe soportar.
+3. Identificar DTOs de entrada, DTOs de salida, servicios de dominio, repositorios y chequeos de politicas.
+4. Definir eventos de auditoria y casos de error antes de escribir codigo de endpoints.
+5. Agregar pruebas para reglas de dominio y rutas de integracion.
 
-## Rules
+## Reglas
 
-- Keep controllers thin.
-- Put validation close to the entry point.
-- Put business rules in services or policy objects, not in controllers.
-- Hide persistence details behind repositories or access adapters.
-- Emit audit events for security-sensitive or business-critical actions.
+- Mantener los controllers delgados.
+- Colocar la validacion cerca del punto de entrada.
+- Colocar las reglas de negocio en servicios u objetos de politica, no en controllers.
+- Ocultar detalles de persistencia detras de repositorios o adaptadores de acceso.
+- Emitir eventos de auditoria para acciones sensibles de seguridad o criticas para el negocio.
 
-## Review checklist
+## Checklist de revision
 
-- Is module ownership clear?
-- Are DTOs and domain models separated?
-- Are permission checks explicit?
-- Is error handling consistent?
-- Are indexes and query costs considered for the new endpoints?
+- La propiedad del modulo es clara?
+- Los DTOs y los modelos de dominio estan separados?
+- Los chequeos de permisos son explicitos?
+- El manejo de errores es consistente?
+- Se consideran indices y costos de consulta para los nuevos endpoints?

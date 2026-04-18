@@ -1,40 +1,40 @@
-# React Babylon Feature
+# Feature React Babylon
 
-## Use this skill when
+## Usa esta skill cuando
 
-- implementing or refactoring simulation-facing frontend features,
-- integrating Babylon.js scenes with React flows,
-- wiring simulation events to backend APIs,
-- optimizing scene lifecycle or asset loading behavior.
+- implementes o refactorices features frontend orientadas a simulacion,
+- integres escenas de Babylon.js con flujos de React,
+- conectes eventos de simulacion con APIs backend,
+- optimices el ciclo de vida de la escena o la carga de assets.
 
-## Outcome
+## Resultado
 
-Deliver a frontend feature that keeps rendering concerns, UI concerns, and domain event reporting clearly separated.
+Entregar un feature frontend que mantenga claramente separadas las preocupaciones de renderizado, UI y reporte de eventos de dominio.
 
-## Workflow
+## Flujo de trabajo
 
-1. Identify the user flow that owns the simulation entry point.
-2. Separate application shell responsibilities from Babylon runtime responsibilities.
-3. Define the minimal contract between the scene layer and the React layer:
-   - scene boot params
-   - emitted events
-   - completion payload
-   - error conditions
-4. Check asset loading, cleanup, retry, and offline failure behavior.
-5. Ensure the backend-facing payloads are mapped through a typed adapter instead of being sent ad hoc.
+1. Identificar el flujo de usuario que posee el punto de entrada a la simulacion.
+2. Separar responsabilidades del shell de aplicacion y del runtime de Babylon.
+3. Definir el contrato minimo entre la capa de escena y la capa de React:
+   - parametros de arranque de la escena
+   - eventos emitidos
+   - payload de finalizacion
+   - condiciones de error
+4. Revisar la carga de assets, limpieza, reintentos y comportamiento ante fallos offline.
+5. Asegurar que los payloads hacia backend se mapeen mediante un adaptador tipado en lugar de enviarlos ad hoc.
 
-## Rules
+## Reglas
 
-- Do not place grading or authorization logic inside Babylon scene code.
-- Do not let page components manage low-level scene objects directly unless the code is very small and well-contained.
-- Emit structured events such as `checkpoint.completed`, `interaction.failed`, or `simulation.finished`.
-- Clean up engine resources on unmount or scene switch.
-- Prefer progressive loading and visible user feedback for heavy assets.
+- No colocar logica de calificacion o autorizacion dentro del codigo de escena de Babylon.
+- No permitir que componentes de pagina gestionen objetos de escena de bajo nivel directamente, salvo que el codigo sea muy pequeno y bien acotado.
+- Emitir eventos estructurados como `checkpoint.completed`, `interaction.failed` o `simulation.finished`.
+- Limpiar recursos del engine en unmount o al cambiar de escena.
+- Preferir carga progresiva y feedback visible al usuario para assets pesados.
 
-## Review checklist
+## Checklist de revision
 
-- Is the scene lifecycle explicit?
-- Is business logic outside the rendering layer?
-- Are API payloads typed and reusable?
-- Are errors and retries visible to the user?
-- Is there a path to test the logic without rendering the full scene?
+- El ciclo de vida de la escena es explicito?
+- La logica de negocio esta fuera de la capa de renderizado?
+- Los payloads de API son tipados y reutilizables?
+- Los errores y reintentos son visibles para el usuario?
+- Existe una via para testear la logica sin renderizar la escena completa?
