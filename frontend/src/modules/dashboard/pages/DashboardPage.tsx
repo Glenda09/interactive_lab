@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useAuthStore } from "../../auth/state/useAuthStore";
 import {
-  CourseSummaryResponse,
+  CourseResponse,
   getCourses,
   getHealthCheck
 } from "../../../shared/lib/api/platform";
@@ -25,7 +25,7 @@ const governanceItems = [
   }
 ];
 
-function countByStatus(courses: CourseSummaryResponse[], status: string) {
+function countByStatus(courses: CourseResponse[], status: string) {
   return courses.filter((course) => course.status === status).length;
 }
 
@@ -37,13 +37,13 @@ export function DashboardPage() {
   });
   const coursesQuery = useQuery({
     queryKey: ["platform-courses"],
-    queryFn: getCourses
+    queryFn: () => getCourses()
   });
 
-  const courses = coursesQuery.data ?? [];
+  const courses: CourseResponse[] = Array.isArray(coursesQuery.data) ? coursesQuery.data : [];
   const publishedCourses = countByStatus(courses, "published");
   const draftCourses = countByStatus(courses, "draft");
-  const totalModules = courses.reduce((total, course) => total + course.modules, 0);
+  const totalModules = courses.reduce((total, course) => total + (course.modules?.length ?? 0), 0);
 
   const summaryCards = [
     {
@@ -127,7 +127,7 @@ export function DashboardPage() {
                 <li key={course.id}>
                   <div>
                     <strong>{course.title}</strong>
-                    <span>{`${course.code} - ${course.modules} modulos - ${course.estimatedDurationHours} h`}</span>
+                    <span>{`${course.code} - ${course.modules?.length ?? 0} modulos - ${course.estimatedHours} h`}</span>
                   </div>
                   <span
                     className={`status-chip ${

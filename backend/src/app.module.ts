@@ -10,6 +10,9 @@ import { UsersModule } from "./modules/users/users.module.js";
 import { CoursesModule } from "./modules/courses/courses.module.js";
 import { ScenariosModule } from "./modules/scenarios/scenarios.module.js";
 import { SimulationSessionsModule } from "./modules/simulation-sessions/simulation-sessions.module.js";
+import { EnrollmentsModule } from "./modules/enrollments/enrollments.module.js";
+import { ProgressModule } from "./modules/progress/progress.module.js";
+import { RolesModule } from "./modules/roles/roles.module.js";
 
 @Module({
   imports: [
@@ -28,7 +31,10 @@ import { SimulationSessionsModule } from "./modules/simulation-sessions/simulati
     UsersModule,
     CoursesModule,
     ScenariosModule,
-    SimulationSessionsModule
+    SimulationSessionsModule,
+    EnrollmentsModule,
+    ProgressModule,
+    RolesModule
   ],
   controllers: [HealthController]
 })
