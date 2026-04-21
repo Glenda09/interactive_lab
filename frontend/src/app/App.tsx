@@ -111,19 +111,6 @@ function AdminLayout() {
       <div className={`app-shell ${isSidebarCollapsed ? "is-collapsed" : ""}`}>
         <aside className="sidebar">
           <div className="sidebar-top">
-            <div className="admin-brand">
-              <svg viewBox="0 0 32 32" aria-hidden="true" width="32" height="32">
-                <polygon fill="var(--brand-accent)" points="16,3 29,10 29,22 16,29 3,22 3,10" opacity="0.9" />
-                <polygon fill="white" opacity="0.2" points="16,3 29,10 16,16" />
-                <circle cx="16" cy="16" fill="white" r="5" opacity="0.9" />
-              </svg>
-              {!isSidebarCollapsed && (
-                <div>
-                  <div className="admin-brand-name">SimuLearn</div>
-                  <div className="admin-brand-role">Admin</div>
-                </div>
-              )}
-            </div>
             <button
               aria-label={isSidebarCollapsed ? "Expandir menú" : "Colapsar menú"}
               className="sidebar-toggle"

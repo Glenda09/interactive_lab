@@ -55,21 +55,6 @@ export function LearnLayout() {
       <div className={`app-shell learn-shell ${collapsed ? "is-collapsed" : ""}`}>
         <nav className="sidebar learn-sidebar">
           <div className="sidebar-top">
-            <div className="learn-brand">
-              <div className="learn-brand-icon">
-                <svg viewBox="0 0 32 32" aria-hidden="true">
-                  <polygon fill="var(--brand-accent)" points="16,4 28,10 28,22 16,28 4,22 4,10" opacity="0.9" />
-                  <polygon fill="white" opacity="0.25" points="16,4 28,10 16,16" />
-                  <circle cx="16" cy="16" fill="white" r="4" opacity="0.9" />
-                </svg>
-              </div>
-              {!collapsed && (
-                <div>
-                  <div className="learn-brand-name">SimuLearn</div>
-                  <div className="learn-brand-sub">Capacitación 3D</div>
-                </div>
-              )}
-            </div>
             <button className="sidebar-toggle" onClick={() => setCollapsed(v => !v)} type="button" aria-label="Colapsar menú">
               <MenuIcon />
             </button>
