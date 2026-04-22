@@ -10,6 +10,8 @@ import {
   getScenarios,
   updateScenario
 } from "../../../shared/lib/api/platform";
+import { ConfirmDialog } from "../../../shared/components/ConfirmDialog";
+import { ModalPortal } from "../../../shared/components/ModalPortal";
 
 const schema = z.object({
   code: z.string().min(2, "Ingresa el código"),
@@ -44,6 +46,8 @@ export function ScenarioManagementPage() {
   const [showForm, setShowForm] = useState(false);
   const [editing, setEditing] = useState<ScenarioResponse | null>(null);
   const [filter, setFilter] = useState<"all" | "draft" | "published">("all");
+  const [mutationError, setMutationError] = useState<string | null>(null);
+  const [confirmDelete, setConfirmDelete] = useState<ScenarioResponse | null>(null);
 
   const scenariosQuery = useQuery({ queryKey: ["scenarios"], queryFn: () => getScenarios() });
 
@@ -51,14 +55,24 @@ export function ScenarioManagementPage() {
     resolver: zodResolver(schema)
   });
 
+  function extractErrorMessage(err: unknown): string {
+    if (err && typeof err === "object" && "response" in err) {
+      const res = (err as { response?: { data?: { message?: string } } }).response;
+      if (res?.data?.message) return res.data.message;
+    }
+    return "Ocurrió un error al guardar el escenario.";
+  }
+
   const createMutation = useMutation({
     mutationFn: (data: Partial<ScenarioResponse>) => createScenario(data),
-    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["scenarios"] }); closeForm(); }
+    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["scenarios"] }); closeForm(); },
+    onError: (err: unknown) => { setMutationError(extractErrorMessage(err)); }
   });
 
   const updateMutation = useMutation({
     mutationFn: ({ id, data }: { id: string; data: Partial<ScenarioResponse> }) => updateScenario(id, data),
-    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["scenarios"] }); closeForm(); }
+    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["scenarios"] }); closeForm(); },
+    onError: (err: unknown) => { setMutationError(extractErrorMessage(err)); }
   });
 
   const deleteMutation = useMutation({
@@ -68,17 +82,19 @@ export function ScenarioManagementPage() {
 
   function openCreate() {
     setEditing(null);
+    setMutationError(null);
     reset({ code: "", title: "", description: "", version: "1.0.0", status: "draft", difficulty: "beginner", tags: "" });
     setShowForm(true);
   }
 
   function openEdit(s: ScenarioResponse) {
     setEditing(s);
+    setMutationError(null);
     reset({ code: s.code, title: s.title, description: s.description, version: s.version, status: s.status, difficulty: s.difficulty, tags: s.tags?.join(", ") });
     setShowForm(true);
   }
 
-  function closeForm() { setShowForm(false); setEditing(null); }
+  function closeForm() { setShowForm(false); setEditing(null); setMutationError(null); }
 
   function onSubmit(values: FormValues) {
     const payload: Partial<ScenarioResponse> = {
@@ -95,21 +111,6 @@ export function ScenarioManagementPage() {
 
   return (
     <section className="page-section admin-dashboard">
-      <header className="admin-hero-card">
-        <div className="admin-hero-copy">
-          <p className="eyebrow">Motor gráfico Babylon.js 8</p>
-          <h2>Escenarios de simulación 3D</h2>
-          <p>Administra los escenarios interactivos que se cargan en el runtime Babylon.js durante las sesiones de capacitación.</p>
-        </div>
-        <aside className="hero-side-panel">
-          <div className="hero-side-header">
-            <p className="eyebrow">Inventario</p>
-          </div>
-          <div className="hero-side-meta"><span>Total escenarios</span><strong>{scenarios.length}</strong></div>
-          <div className="hero-side-meta"><span>Publicados</span><strong>{scenarios.filter(s => s.status === "published").length}</strong></div>
-          <div className="hero-side-meta"><span>En desarrollo</span><strong>{scenarios.filter(s => s.status === "draft").length}</strong></div>
-        </aside>
-      </header>
 
       <div className="admin-toolbar">
         <div className="filter-tabs">
@@ -125,6 +126,7 @@ export function ScenarioManagementPage() {
       </div>
 
       {showForm && (
+        <ModalPortal>
         <div className="modal-overlay">
           <div className="modal-panel">
             <div className="modal-header">
@@ -174,6 +176,9 @@ export function ScenarioManagementPage() {
                   <input placeholder="eléctrico, panel, seguridad" {...register("tags")} />
                 </div>
               </div>
+              {mutationError && (
+                <div className="form-message is-error">{mutationError}</div>
+              )}
               <div className="modal-actions">
                 <button className="secondary-button" onClick={closeForm} type="button">Cancelar</button>
                 <button className="primary-button" disabled={isPending} type="submit">
@@ -183,6 +188,7 @@ export function ScenarioManagementPage() {
             </form>
           </div>
         </div>
+        </ModalPortal>
       )}
 
       <div className="scenario-cards-grid">
@@ -218,7 +224,7 @@ export function ScenarioManagementPage() {
                 <button className="secondary-button sm" onClick={() => openEdit(s)} type="button"><EditIcon /> Editar</button>
                 <button
                   className="icon-btn danger"
-                  onClick={() => { if (confirm(`¿Eliminar "${s.title}"?`)) deleteMutation.mutate(s.id); }}
+                  onClick={() => setConfirmDelete(s)}
                   title="Eliminar"
                   type="button"
                 ><TrashIcon /></button>
@@ -227,6 +233,15 @@ export function ScenarioManagementPage() {
           </article>
         ))}
       </div>
+
+      <ConfirmDialog
+        open={confirmDelete !== null}
+        title="Eliminar escenario"
+        message={`¿Estás seguro de que deseas eliminar "${confirmDelete?.title}"? Esta acción no se puede deshacer.`}
+        confirmLabel="Eliminar"
+        onConfirm={() => { if (confirmDelete) deleteMutation.mutate(confirmDelete.id); setConfirmDelete(null); }}
+        onCancel={() => setConfirmDelete(null)}
+      />
     </section>
   );
 }

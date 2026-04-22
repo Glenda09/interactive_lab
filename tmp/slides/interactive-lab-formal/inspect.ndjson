@@ -1,0 +1,257 @@
+{"kind":"deck","id":"interactive-lab-formal","slideCount":9,"slideSize":{"width":1280,"height":720}}
+{"kind":"slide","slide":1,"id":"u4sg10"}
+{"kind":"slide","slide":2,"id":"eydaty"}
+{"kind":"slide","slide":3,"id":"a24d9d"}
+{"kind":"slide","slide":4,"id":"a3fvah"}
+{"kind":"slide","slide":5,"id":"yt34i5"}
+{"kind":"slide","slide":6,"id":"npubff"}
+{"kind":"slide","slide":7,"id":"vr2rjf"}
+{"kind":"slide","slide":8,"id":"9yvnyo"}
+{"kind":"slide","slide":9,"id":"m64337"}
+{"kind":"image","slide":1,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":1,"id":"3","role":"cover contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":1,"id":"4","role":"cover accent rule","shapeType":"rect","bbox":[64,86,7,455]}
+{"kind":"textbox","slide":1,"id":"5","role":"kicker","text":"IMPLEMENTACION DE LENGUAJES DE PROGRAMACION PARA NEGOCIOS","textPreview":"IMPLEMENTACION DE LENGUAJES DE PROGRAMACION PARA NEGOCIOS","textChars":57,"textLines":1,"bbox":[86,88,520,26]}
+{"kind":"textbox","slide":1,"id":"6","role":"cover title","text":"Interactive Lab","textPreview":"Interactive Lab","textChars":15,"textLines":1,"bbox":[82,130,785,184]}
+{"kind":"textbox","slide":1,"id":"7","role":"cover subtitle","text":"Presentacion formal del desarrollo de la Plataforma de Capacitacion Virtual con Simulacion 3D.","textPreview":"Presentacion formal del desarrollo de la Plataforma de Capacitacion Virtual con Simulacion 3D.","textChars":94,"textLines":1,"bbox":[86,326,610,86]}
+{"kind":"shape","slide":1,"id":"8","role":"cover moment panel","shapeType":"roundRect","bbox":[86,456,390,92]}
+{"kind":"textbox","slide":1,"id":"9","role":"cover moment","text":"Equipo de desarrollo","textPreview":"Equipo de desarrollo","textChars":20,"textLines":1,"bbox":[112,478,336,40]}
+{"kind":"textbox","slide":1,"id":"10","role":"cover team","text":"Sandoval Orellana, Glenda Nicole | SO100122\nPerez Barrera, Diego Fernando | PB100123\nRecinos Ramirez, Marcela Alexandra | RR101423\nMozo Chacon, Alisson Adriana | MC101123","textPreview":"Sandoval Orellana, Glenda Nicole | SO100122 | Perez Barrera, Diego Fernando | PB100123 | Recinos Ramirez, Marcela Alexandra | RR101423 | Mozo Chacon, Alisson Adriana | MC101123","textChars":170,"textLines":4,"bbox":[520,440,610,122]}
+{"kind":"textbox","slide":1,"id":"11","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":2,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":2,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":2,"id":"4","role":"header","text":"01 | RESUMEN","textPreview":"01 | RESUMEN","textChars":12,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":2,"id":"5","role":"header","text":"02 / 09","textPreview":"02 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":2,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":2,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":2,"id":"8","role":"title","text":"Propuesta del proyecto","textPreview":"Propuesta del proyecto","textChars":22,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":2,"id":"9","role":"subtitle","text":"Interactive Lab combina contenido academico, simulacion 3D y medicion de desempeno para capacitar tecnicos desde el navegador.","textPreview":"Interactive Lab combina contenido academico, simulacion 3D y medicion de desempeno para capacitar tecnicos desde el navegador.","textChars":126,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":2,"id":"10","role":"card panel: Objetivo","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"11","role":"card accent: Objetivo","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":2,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":2,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":2,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":2,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":2,"id":"16","role":"card label","text":"Objetivo","textPreview":"Objetivo","textChars":8,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"17","role":"card body: Objetivo","text":"Desarrollar una plataforma web\nfuncional donde los usuarios\nejecuten simulaciones tecnicas 3D y\nreciban seguimiento de su avance.","textPreview":"Desarrollar una plataforma web | funcional donde los usuarios | ejecuten simulaciones tecnicas 3D y | reciban seguimiento de su avance.","textChars":129,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":2,"id":"18","role":"card panel: Enfoque","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"19","role":"card accent: Enfoque","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":2,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":2,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":2,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":2,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":2,"id":"24","role":"card label","text":"Enfoque","textPreview":"Enfoque","textChars":7,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"25","role":"card body: Enfoque","text":"La solucion se plantea como una\narquitectura web moderna: React\npara la interfaz, Babylon.js para\nla escena 3D y Node.js para la API.","textPreview":"La solucion se plantea como una | arquitectura web moderna: React | para la interfaz, Babylon.js para | la escena 3D y Node.js para la API.","textChars":133,"textLines":4,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":2,"id":"26","role":"card panel: Valor","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":2,"id":"27","role":"card accent: Valor","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":2,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":2,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":2,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":2,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":2,"id":"32","role":"card label","text":"Valor","textPreview":"Valor","textChars":5,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":2,"id":"33","role":"card body: Valor","text":"Reduce dependencia de laboratorios\nfisicos, estandariza practicas y\npermite generar evidencia de\naprendizaje y desempeno.","textPreview":"Reduce dependencia de laboratorios | fisicos, estandariza practicas y | permite generar evidencia de | aprendizaje y desempeno.","textChars":121,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":2,"id":"34","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":3,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":3,"id":"3","role":"metrics contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":3,"id":"4","role":"header","text":"02 | TECNOLOGIAS","textPreview":"02 | TECNOLOGIAS","textChars":16,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":3,"id":"5","role":"header","text":"03 / 09","textPreview":"03 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":3,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":3,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":3,"id":"8","role":"title","text":"Stack tecnologico utilizado","textPreview":"Stack tecnologico utilizado","textChars":27,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":3,"id":"9","role":"subtitle","text":"La seleccion prioriza integracion web, mantenibilidad y despliegue gradual.","textPreview":"La seleccion prioriza integracion web, mantenibilidad y despliegue gradual.","textChars":75,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":3,"id":"10","role":"metric panel: Frontend con Vite, rutas, modulos administrativos y portal de aprendizaje.","shapeType":"roundRect","bbox":[92,404,330,174]}
+{"kind":"shape","slide":3,"id":"11","role":"metric accent: Frontend con Vite, rutas, modulos administrativos y portal de aprendizaje.","shapeType":"rect","bbox":[92,404,330,7]}
+{"kind":"textbox","slide":3,"id":"12","role":"metric value","text":"React","textPreview":"React","textChars":5,"textLines":1,"bbox":[114,428,286,54]}
+{"kind":"textbox","slide":3,"id":"13","role":"metric label","text":"Frontend con Vite, rutas, modulos administrativos y portal de aprendizaje.","textPreview":"Frontend con Vite, rutas, modulos administrativos y portal de aprendizaje.","textChars":74,"textLines":1,"bbox":[116,486,282,38]}
+{"kind":"textbox","slide":3,"id":"14","role":"metric note","text":"React 19 + React Router","textPreview":"React 19 + React Router","textChars":23,"textLines":1,"bbox":[116,536,282,22]}
+{"kind":"shape","slide":3,"id":"15","role":"metric panel: Motor grafico WebGL para escenarios 3D interactivos dentro del navegador.","shapeType":"roundRect","bbox":[462,404,330,174]}
+{"kind":"shape","slide":3,"id":"16","role":"metric accent: Motor grafico WebGL para escenarios 3D interactivos dentro del navegador.","shapeType":"rect","bbox":[462,404,330,7]}
+{"kind":"textbox","slide":3,"id":"17","role":"metric value","text":"Babylon.js","textPreview":"Babylon.js","textChars":10,"textLines":1,"bbox":[484,428,286,54]}
+{"kind":"textbox","slide":3,"id":"18","role":"metric label","text":"Motor grafico WebGL para escenarios 3D interactivos dentro del navegador.","textPreview":"Motor grafico WebGL para escenarios 3D interactivos dentro del navegador.","textChars":73,"textLines":1,"bbox":[486,486,282,38]}
+{"kind":"textbox","slide":3,"id":"19","role":"metric note","text":"Babylon.js 8","textPreview":"Babylon.js 8","textChars":12,"textLines":1,"bbox":[486,536,282,22]}
+{"kind":"shape","slide":3,"id":"20","role":"metric panel: Backend NestJS modular con MongoDB, JWT, Fastify y documentacion OpenAPI.","shapeType":"roundRect","bbox":[832,404,330,174]}
+{"kind":"shape","slide":3,"id":"21","role":"metric accent: Backend NestJS modular con MongoDB, JWT, Fastify y documentacion OpenAPI.","shapeType":"rect","bbox":[832,404,330,7]}
+{"kind":"textbox","slide":3,"id":"22","role":"metric value","text":"Node.js","textPreview":"Node.js","textChars":7,"textLines":1,"bbox":[854,428,286,54]}
+{"kind":"textbox","slide":3,"id":"23","role":"metric label","text":"Backend NestJS modular con MongoDB, JWT, Fastify y documentacion OpenAPI.","textPreview":"Backend NestJS modular con MongoDB, JWT, Fastify y documentacion OpenAPI.","textChars":73,"textLines":1,"bbox":[856,486,282,38]}
+{"kind":"textbox","slide":3,"id":"24","role":"metric note","text":"API /api/v1","textPreview":"API /api/v1","textChars":11,"textLines":1,"bbox":[856,536,282,22]}
+{"kind":"textbox","slide":3,"id":"25","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":4,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":4,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":4,"id":"4","role":"header","text":"03 | INFRAESTRUCTURA","textPreview":"03 | INFRAESTRUCTURA","textChars":20,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":4,"id":"5","role":"header","text":"04 / 09","textPreview":"04 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":4,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":4,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":4,"id":"8","role":"title","text":"Montaje de infraestructura","textPreview":"Montaje de infraestructura","textChars":26,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":4,"id":"9","role":"subtitle","text":"La solucion esta pensada para iniciar localmente y evolucionar hacia contenedores, CDN y Kubernetes.","textPreview":"La solucion esta pensada para iniciar localmente y evolucionar hacia contenedores, CDN y Kubernetes.","textChars":100,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":4,"id":"10","role":"card panel: Entorno local","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"11","role":"card accent: Entorno local","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":4,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":4,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":4,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":4,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":4,"id":"16","role":"card label","text":"Entorno local","textPreview":"Entorno local","textChars":13,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"17","role":"card body: Entorno local","text":"El repositorio usa workspaces npm,\nvariables .env.example, backend en\npuerto 3000 y frontend Vite para\ndesarrollo.","textPreview":"El repositorio usa workspaces npm, | variables .env.example, backend en | puerto 3000 y frontend Vite para | desarrollo.","textChars":114,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":4,"id":"18","role":"card panel: Base de datos","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"19","role":"card accent: Base de datos","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":4,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":4,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":4,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":4,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":4,"id":"24","role":"card label","text":"Base de datos","textPreview":"Base de datos","textChars":13,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"25","role":"card body: Base de datos","text":"MongoDB se levanta con\ndocker-compose.mongo.yml e imagen\ndefinida en infra/mongo para\npruebas locales.","textPreview":"MongoDB se levanta con | docker-compose.mongo.yml e imagen | definida en infra/mongo para | pruebas locales.","textChars":102,"textLines":4,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":4,"id":"26","role":"card panel: Despliegue objetivo","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":4,"id":"27","role":"card accent: Despliegue objetivo","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":4,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":4,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":4,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":4,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":4,"id":"32","role":"card label","text":"Despliegue objetivo","textPreview":"Despliegue objetivo","textChars":19,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":4,"id":"33","role":"card body: Despliegue objetivo","text":"Frontend y assets 3D servidos por\nCDN; API contenedorizada en\nKubernetes; base de datos\ngestionada.","textPreview":"Frontend y assets 3D servidos por | CDN; API contenedorizada en | Kubernetes; base de datos | gestionada.","textChars":99,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":4,"id":"34","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":5,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":5,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":5,"id":"4","role":"header","text":"04 | BACKEND","textPreview":"04 | BACKEND","textChars":12,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":5,"id":"5","role":"header","text":"05 / 09","textPreview":"05 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":5,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":5,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":5,"id":"8","role":"title","text":"Backend: generalidades funcionales","textPreview":"Backend: generalidades funcionales","textChars":34,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":5,"id":"9","role":"subtitle","text":"La API ya tiene estructura modular, seguridad base y dominios principales conectados a MongoDB.","textPreview":"La API ya tiene estructura modular, seguridad base y dominios principales conectados a MongoDB.","textChars":95,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":5,"id":"10","role":"card panel: Identidad","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":5,"id":"11","role":"card accent: Identidad","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":5,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":5,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":5,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":5,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":5,"id":"16","role":"card label","text":"Identidad","textPreview":"Identidad","textChars":9,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"17","role":"card body: Identidad","text":"Modulo IAM con login, refresh,\nlogout, recuperacion, reseteo y\ncambio de contrasena mediante JWT y\nrefresh tokens.","textPreview":"Modulo IAM con login, refresh, | logout, recuperacion, reseteo y | cambio de contrasena mediante JWT y | refresh tokens.","textChars":114,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":5,"id":"18","role":"card panel: Gestion academica","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":5,"id":"19","role":"card accent: Gestion academica","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":5,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":5,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":5,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":5,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":5,"id":"24","role":"card label","text":"Gestion academica","textPreview":"Gestion academica","textChars":17,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"25","role":"card body: Gestion academica","text":"Modulos de usuarios, roles, cursos,\nescenarios, inscripciones y\nprogreso como base de\nadministracion.","textPreview":"Modulos de usuarios, roles, cursos, | escenarios, inscripciones y | progreso como base de | administracion.","textChars":101,"textLines":4,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":5,"id":"26","role":"card panel: Simulacion","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":5,"id":"27","role":"card accent: Simulacion","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":5,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":5,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":5,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":5,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":5,"id":"32","role":"card label","text":"Simulacion","textPreview":"Simulacion","textChars":10,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":5,"id":"33","role":"card body: Simulacion","text":"Endpoints para crear sesiones,\nregistrar eventos en lote,\ncompletar intentos y consultar\nresultados.","textPreview":"Endpoints para crear sesiones, | registrar eventos en lote, | completar intentos y consultar | resultados.","textChars":100,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":5,"id":"34","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":6,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":6,"id":"3","role":"metrics contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":6,"id":"4","role":"header","text":"05 | FRONTEND","textPreview":"05 | FRONTEND","textChars":13,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":6,"id":"5","role":"header","text":"06 / 09","textPreview":"06 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":6,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":6,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":6,"id":"8","role":"title","text":"Frontend: experiencia implementada","textPreview":"Frontend: experiencia implementada","textChars":34,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":6,"id":"9","role":"subtitle","text":"La interfaz ya cubre flujos administrativos, aprendizaje, autenticacion y simulacion 3D.","textPreview":"La interfaz ya cubre flujos administrativos, aprendizaje, autenticacion y simulacion 3D.","textChars":88,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":6,"id":"10","role":"metric panel: Areas principales: administracion y portal de aprendizaje para estudiantes.","shapeType":"roundRect","bbox":[92,404,330,174]}
+{"kind":"shape","slide":6,"id":"11","role":"metric accent: Areas principales: administracion y portal de aprendizaje para estudiantes.","shapeType":"rect","bbox":[92,404,330,7]}
+{"kind":"textbox","slide":6,"id":"12","role":"metric value","text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[114,428,286,54]}
+{"kind":"textbox","slide":6,"id":"13","role":"metric label","text":"Areas principales: administracion y portal de aprendizaje para estudiantes.","textPreview":"Areas principales: administracion y portal de aprendizaje para estudiantes.","textChars":75,"textLines":1,"bbox":[116,486,282,38]}
+{"kind":"textbox","slide":6,"id":"14","role":"metric note","text":"Rutas /admin y /learn","textPreview":"Rutas /admin y /learn","textChars":21,"textLines":1,"bbox":[116,536,282,22]}
+{"kind":"shape","slide":6,"id":"15","role":"metric panel: Secciones administrativas: dashboard, cursos, escenarios, inscripciones, usuarios, reportes y simulacion.","shapeType":"roundRect","bbox":[462,404,330,174]}
+{"kind":"shape","slide":6,"id":"16","role":"metric accent: Secciones administrativas: dashboard, cursos, escenarios, inscripciones, usuarios, reportes y simulacion.","shapeType":"rect","bbox":[462,404,330,7]}
+{"kind":"textbox","slide":6,"id":"17","role":"metric value","text":"7","textPreview":"7","textChars":1,"textLines":1,"bbox":[484,428,286,54]}
+{"kind":"textbox","slide":6,"id":"18","role":"metric label","text":"Secciones administrativas: dashboard, cursos, escenarios, inscripciones, usuarios, reportes y simulacion.","textPreview":"Secciones administrativas: dashboard, cursos, escenarios, inscripciones, usuarios, reportes y simulacion.","textChars":105,"textLines":1,"bbox":[486,486,282,38]}
+{"kind":"textbox","slide":6,"id":"19","role":"metric note","text":"App.tsx","textPreview":"App.tsx","textChars":7,"textLines":1,"bbox":[486,536,282,22]}
+{"kind":"shape","slide":6,"id":"20","role":"metric panel: Canvas Babylon.js con escenas de riego, ciclo hidrico, comparativa y panel electrico.","shapeType":"roundRect","bbox":[832,404,330,174]}
+{"kind":"shape","slide":6,"id":"21","role":"metric accent: Canvas Babylon.js con escenas de riego, ciclo hidrico, comparativa y panel electrico.","shapeType":"rect","bbox":[832,404,330,7]}
+{"kind":"textbox","slide":6,"id":"22","role":"metric value","text":"3D","textPreview":"3D","textChars":2,"textLines":1,"bbox":[854,428,286,54]}
+{"kind":"textbox","slide":6,"id":"23","role":"metric label","text":"Canvas Babylon.js con escenas de riego, ciclo hidrico, comparativa y panel electrico.","textPreview":"Canvas Babylon.js con escenas de riego, ciclo hidrico, comparativa y panel electrico.","textChars":85,"textLines":1,"bbox":[856,486,282,38]}
+{"kind":"textbox","slide":6,"id":"24","role":"metric note","text":"SimulationCanvas.tsx","textPreview":"SimulationCanvas.tsx","textChars":20,"textLines":1,"bbox":[856,536,282,22]}
+{"kind":"textbox","slide":6,"id":"25","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":7,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":7,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":7,"id":"4","role":"header","text":"06 | AVANCE","textPreview":"06 | AVANCE","textChars":11,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":7,"id":"5","role":"header","text":"07 / 09","textPreview":"07 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":7,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":7,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":7,"id":"8","role":"title","text":"Porcentaje de avance estimado","textPreview":"Porcentaje de avance estimado","textChars":29,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":7,"id":"9","role":"subtitle","text":"Tomando como base el documento y lo implementado en el repositorio, el proyecto se estima en 45% de avance funcional.","textPreview":"Tomando como base el documento y lo implementado en el repositorio, el proyecto se estima en 45% de avance funcional.","textChars":117,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":7,"id":"10","role":"card panel: Base completada","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"11","role":"card accent: Base completada","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":7,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":7,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":7,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":7,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":7,"id":"16","role":"card label","text":"Base completada","textPreview":"Base completada","textChars":15,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"17","role":"card body: Base completada","text":"Documentacion, arquitectura, stack,\nmodelo conceptual, OpenAPI inicial,\nestructura monorepo e\ninfraestructura local.","textPreview":"Documentacion, arquitectura, stack, | modelo conceptual, OpenAPI inicial, | estructura monorepo e | infraestructura local.","textChars":116,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":7,"id":"18","role":"card panel: Funcionalidad parcial","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"19","role":"card accent: Funcionalidad parcial","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":7,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":7,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":7,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":7,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":7,"id":"24","role":"card label","text":"Funcionalidad parcial","textPreview":"Funcionalidad parcial","textChars":21,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"25","role":"card body: Funcionalidad parcial","text":"Backend y frontend tienen flujos\nreales, pero faltan evaluaciones\ncompletas, reportes finales,\nauditoria consultable y despliegue\nproductivo.","textPreview":"Backend y frontend tienen flujos | reales, pero faltan evaluaciones | completas, reportes finales, | auditoria consultable y despliegue | productivo.","textChars":141,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":7,"id":"26","role":"card panel: Lectura del 45%","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":7,"id":"27","role":"card accent: Lectura del 45%","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":7,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":7,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":7,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":7,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":7,"id":"32","role":"card label","text":"Lectura del 45%","textPreview":"Lectura del 45%","textChars":15,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":7,"id":"33","role":"card body: Lectura del 45%","text":"Supera el minimo del 30% solicitado\nporque ya existe integracion de\nmodulos, rutas protegidas y\nsimulacion 3D; aun no es solucion\nfinal.","textPreview":"Supera el minimo del 30% solicitado | porque ya existe integracion de | modulos, rutas protegidas y | simulacion 3D; aun no es solucion | final.","textChars":136,"textLines":5,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":7,"id":"34","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":8,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":8,"id":"3","role":"content contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":8,"id":"4","role":"header","text":"07 | ORGANIZACION","textPreview":"07 | ORGANIZACION","textChars":17,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":8,"id":"5","role":"header","text":"08 / 09","textPreview":"08 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":8,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":8,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":8,"id":"8","role":"title","text":"Reuniones y trabajo asignado","textPreview":"Reuniones y trabajo asignado","textChars":28,"textLines":1,"bbox":[64,86,760,142]}
+{"kind":"textbox","slide":8,"id":"9","role":"subtitle","text":"La coordinacion del equipo se organizo por areas: documentacion, backend, frontend, infraestructura y validacion.","textPreview":"La coordinacion del equipo se organizo por areas: documentacion, backend, frontend, infraestructura y validacion.","textChars":113,"textLines":1,"bbox":[66,234,720,70]}
+{"kind":"shape","slide":8,"id":"10","role":"card panel: Reuniones","shapeType":"roundRect","bbox":[84,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"11","role":"card accent: Reuniones","shapeType":"rect","bbox":[84,388,8,220]}
+{"kind":"shape","slide":8,"id":"12","role":"icon badge","shapeType":"ellipse","bbox":[106,412,54,54]}
+{"kind":"shape","slide":8,"id":"13","role":"icon glyph","shapeType":"rect","bbox":[122,441,6,12]}
+{"kind":"shape","slide":8,"id":"14","role":"icon glyph","shapeType":"rect","bbox":[131,433,6,20]}
+{"kind":"shape","slide":8,"id":"15","role":"icon glyph","shapeType":"rect","bbox":[140,426,6,27]}
+{"kind":"textbox","slide":8,"id":"16","role":"card label","text":"Reuniones","textPreview":"Reuniones","textChars":9,"textLines":1,"bbox":[172,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"17","role":"card body: Reuniones","text":"Levantamiento de alcance, seleccion\ntecnologica, revision de avances,\nvalidacion de interfaz y\npreparacion de entrega formal.","textPreview":"Levantamiento de alcance, seleccion | tecnologica, revision de avances, | validacion de interfaz y | preparacion de entrega formal.","textChars":125,"textLines":4,"bbox":[108,474,307.3333333333333,112]}
+{"kind":"shape","slide":8,"id":"18","role":"card panel: Asignacion","shapeType":"roundRect","bbox":[463.3333333333333,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"19","role":"card accent: Asignacion","shapeType":"rect","bbox":[463.3333333333333,388,8,220]}
+{"kind":"shape","slide":8,"id":"20","role":"icon badge","shapeType":"ellipse","bbox":[485.3333333333333,412,54,54]}
+{"kind":"shape","slide":8,"id":"21","role":"icon glyph","shapeType":"ellipse","bbox":[498.3333333333333,430,10,10]}
+{"kind":"shape","slide":8,"id":"22","role":"icon glyph","shapeType":"ellipse","bbox":[516.3333333333333,439,10,10]}
+{"kind":"shape","slide":8,"id":"23","role":"icon glyph","shapeType":"rect","bbox":[507.3333333333333,437,19,3]}
+{"kind":"textbox","slide":8,"id":"24","role":"card label","text":"Asignacion","textPreview":"Asignacion","textChars":10,"textLines":1,"bbox":[551.3333333333333,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"25","role":"card body: Asignacion","text":"Glenda: documentacion y\ncoordinacion. Diego: backend e\ninfraestructura. Marcela: frontend\ny experiencia de usuario. Alisson:\nescenarios 3D y pruebas.","textPreview":"Glenda: documentacion y | coordinacion. Diego: backend e | infraestructura. Marcela: frontend | y experiencia de usuario. Alisson: | escenarios 3D y pruebas.","textChars":149,"textLines":5,"bbox":[487.3333333333333,474,307.3333333333333,112]}
+{"kind":"shape","slide":8,"id":"26","role":"card panel: Evidencia","shapeType":"roundRect","bbox":[842.6666666666666,388,355.3333333333333,220]}
+{"kind":"shape","slide":8,"id":"27","role":"card accent: Evidencia","shapeType":"rect","bbox":[842.6666666666666,388,8,220]}
+{"kind":"shape","slide":8,"id":"28","role":"icon badge","shapeType":"ellipse","bbox":[864.6666666666666,412,54,54]}
+{"kind":"shape","slide":8,"id":"29","role":"icon glyph","shapeType":"roundRect","bbox":[877.6666666666666,427,26,13]}
+{"kind":"shape","slide":8,"id":"30","role":"icon glyph","shapeType":"roundRect","bbox":[882.6666666666666,436,26,13]}
+{"kind":"shape","slide":8,"id":"31","role":"icon glyph","shapeType":"roundRect","bbox":[887.6666666666666,445,20,10]}
+{"kind":"textbox","slide":8,"id":"32","role":"card label","text":"Evidencia","textPreview":"Evidencia","textChars":9,"textLines":1,"bbox":[930.6666666666666,410,247.33333333333331,28]}
+{"kind":"textbox","slide":8,"id":"33","role":"card body: Evidencia","text":"El documento base, el inventario de\nhardware y el repositorio muestran\nuna division de trabajo alineada\ncon el alcance academico.","textPreview":"El documento base, el inventario de | hardware y el repositorio muestran | una division de trabajo alineada | con el alcance academico.","textChars":129,"textLines":4,"bbox":[866.6666666666666,474,307.3333333333333,112]}
+{"kind":"textbox","slide":8,"id":"34","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}
+{"kind":"image","slide":9,"id":"2","role":"fallback art plate","path":"fallback-data-url","bbox":[0,0,1280,720]}
+{"kind":"shape","slide":9,"id":"3","role":"metrics contrast overlay","shapeType":"rect","bbox":[0,0,1280,720]}
+{"kind":"textbox","slide":9,"id":"4","role":"header","text":"08 | APLICACION REAL","textPreview":"08 | APLICACION REAL","textChars":20,"textLines":1,"bbox":[64,34,430,24]}
+{"kind":"textbox","slide":9,"id":"5","role":"header","text":"09 / 09","textPreview":"09 / 09","textChars":7,"textLines":1,"bbox":[1114,34,104,24]}
+{"kind":"shape","slide":9,"id":"6","role":"header rule","shapeType":"rect","bbox":[64,64,1152,2]}
+{"kind":"shape","slide":9,"id":"7","role":"header marker","shapeType":"ellipse","bbox":[57,57,16,16]}
+{"kind":"textbox","slide":9,"id":"8","role":"title","text":"Solucion para negocios","textPreview":"Solucion para negocios","textChars":22,"textLines":1,"bbox":[64,86,700,142]}
+{"kind":"textbox","slide":9,"id":"9","role":"subtitle","text":"La aplicacion demuestra como los lenguajes de programacion resuelven necesidades reales de capacitacion, control y medicion en organizaciones.","textPreview":"La aplicacion demuestra como los lenguajes de programacion resuelven necesidades reales de capacitacion, control y medicion en organizaciones.","textChars":142,"textLines":1,"bbox":[66,234,700,70]}
+{"kind":"shape","slide":9,"id":"10","role":"metric panel: Capacitacion practica sin exponer al personal a fallos reales, equipos costosos o interrupciones operativas.","shapeType":"roundRect","bbox":[92,404,330,174]}
+{"kind":"shape","slide":9,"id":"11","role":"metric accent: Capacitacion practica sin exponer al personal a fallos reales, equipos costosos o interrupciones operativas.","shapeType":"rect","bbox":[92,404,330,7]}
+{"kind":"textbox","slide":9,"id":"12","role":"metric value","text":"Menor riesgo","textPreview":"Menor riesgo","textChars":12,"textLines":1,"bbox":[114,428,286,54]}
+{"kind":"textbox","slide":9,"id":"13","role":"metric label","text":"Capacitacion practica sin exponer al personal a fallos reales, equipos costosos o interrupciones operativas.","textPreview":"Capacitacion practica sin exponer al personal a fallos reales, equipos costosos o interrupciones operativas.","textChars":108,"textLines":1,"bbox":[116,486,282,38]}
+{"kind":"textbox","slide":9,"id":"14","role":"metric note","text":"Entrenamiento seguro","textPreview":"Entrenamiento seguro","textChars":20,"textLines":1,"bbox":[116,536,282,22]}
+{"kind":"shape","slide":9,"id":"15","role":"metric panel: Usuarios, cursos, inscripciones, sesiones, eventos y progreso quedan centralizados para supervision.","shapeType":"roundRect","bbox":[462,404,330,174]}
+{"kind":"shape","slide":9,"id":"16","role":"metric accent: Usuarios, cursos, inscripciones, sesiones, eventos y progreso quedan centralizados para supervision.","shapeType":"rect","bbox":[462,404,330,7]}
+{"kind":"textbox","slide":9,"id":"17","role":"metric value","text":"Mas control","textPreview":"Mas control","textChars":11,"textLines":1,"bbox":[484,428,286,54]}
+{"kind":"textbox","slide":9,"id":"18","role":"metric label","text":"Usuarios, cursos, inscripciones, sesiones, eventos y progreso quedan centralizados para supervision.","textPreview":"Usuarios, cursos, inscripciones, sesiones, eventos y progreso quedan centralizados para supervision.","textChars":100,"textLines":1,"bbox":[486,486,282,38]}
+{"kind":"textbox","slide":9,"id":"19","role":"metric note","text":"Trazabilidad","textPreview":"Trazabilidad","textChars":12,"textLines":1,"bbox":[486,536,282,22]}
+{"kind":"shape","slide":9,"id":"20","role":"metric panel: La arquitectura web permite ampliar contenidos, escenarios y grupos de usuarios con menor costo marginal.","shapeType":"roundRect","bbox":[832,404,330,174]}
+{"kind":"shape","slide":9,"id":"21","role":"metric accent: La arquitectura web permite ampliar contenidos, escenarios y grupos de usuarios con menor costo marginal.","shapeType":"rect","bbox":[832,404,330,7]}
+{"kind":"textbox","slide":9,"id":"22","role":"metric value","text":"Escalable","textPreview":"Escalable","textChars":9,"textLines":1,"bbox":[854,428,286,54]}
+{"kind":"textbox","slide":9,"id":"23","role":"metric label","text":"La arquitectura web permite ampliar contenidos, escenarios y grupos de usuarios con menor costo marginal.","textPreview":"La arquitectura web permite ampliar contenidos, escenarios y grupos de usuarios con menor costo marginal.","textChars":105,"textLines":1,"bbox":[856,486,282,38]}
+{"kind":"textbox","slide":9,"id":"24","role":"metric note","text":"CDN + Kubernetes","textPreview":"CDN + Kubernetes","textChars":16,"textLines":1,"bbox":[856,536,282,22]}
+{"kind":"textbox","slide":9,"id":"25","role":"caption","text":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textPreview":"Interactive Lab | Plataforma de capacitacion virtual con simulacion 3D","textChars":70,"textLines":1,"bbox":[64,674,980,22]}

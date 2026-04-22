@@ -9,6 +9,8 @@ import {
   getUsers,
   updateEnrollment
 } from "../../../shared/lib/api/platform";
+import { ConfirmDialog } from "../../../shared/components/ConfirmDialog";
+import { ModalPortal } from "../../../shared/components/ModalPortal";
 
 const STATUS_LABELS: Record<string, string> = {
   active: "Activa",
@@ -31,6 +33,7 @@ export function EnrollmentManagementPage() {
   const [selectedUserId, setSelectedUserId] = useState("");
   const [selectedCourseId, setSelectedCourseId] = useState("");
   const [notes, setNotes] = useState("");
+  const [confirmDelete, setConfirmDelete] = useState<EnrollmentResponse | null>(null);
 
   const enrollmentsQuery = useQuery({ queryKey: ["enrollments"], queryFn: () => getEnrollments() });
   const usersQuery = useQuery({ queryKey: ["users"], queryFn: () => getUsers() });
@@ -80,19 +83,6 @@ export function EnrollmentManagementPage() {
 
   return (
     <section className="page-section admin-dashboard">
-      <header className="admin-hero-card">
-        <div className="admin-hero-copy">
-          <p className="eyebrow">Control académico</p>
-          <h2>Inscripciones a cursos de capacitación</h2>
-          <p>Administra qué estudiantes están inscritos en cada curso, controla el estado de sus inscripciones y lleva el registro de progreso.</p>
-        </div>
-        <aside className="hero-side-panel">
-          <div className="hero-side-header"><p className="eyebrow">Resumen</p></div>
-          <div className="hero-side-meta"><span>Total inscripciones</span><strong>{enrollments.length}</strong></div>
-          <div className="hero-side-meta"><span>Activas</span><strong>{enrollments.filter(e => e.status === "active").length}</strong></div>
-          <div className="hero-side-meta"><span>Completadas</span><strong>{enrollments.filter(e => e.status === "completed").length}</strong></div>
-        </aside>
-      </header>
 
       <div className="admin-toolbar">
         <div className="filter-tabs">
@@ -108,6 +98,7 @@ export function EnrollmentManagementPage() {
       </div>
 
       {showForm && (
+        <ModalPortal>
         <div className="modal-overlay">
           <div className="modal-panel">
             <div className="modal-header">
@@ -154,6 +145,7 @@ export function EnrollmentManagementPage() {
             </div>
           </div>
         </div>
+        </ModalPortal>
       )}
 
       <article className="admin-panel">
@@ -233,7 +225,7 @@ export function EnrollmentManagementPage() {
                   )}
                   <button
                     className="icon-btn danger"
-                    onClick={() => { if (confirm("¿Eliminar esta inscripción?")) deleteMutation.mutate(e.id); }}
+                    onClick={() => setConfirmDelete(e)}
                     title="Eliminar"
                     type="button"
                   >
@@ -245,6 +237,15 @@ export function EnrollmentManagementPage() {
           </div>
         )}
       </article>
+
+      <ConfirmDialog
+        open={confirmDelete !== null}
+        title="Eliminar inscripción"
+        message="¿Estás seguro de que deseas eliminar esta inscripción? Esta acción no se puede deshacer."
+        confirmLabel="Eliminar"
+        onConfirm={() => { if (confirmDelete) deleteMutation.mutate(confirmDelete.id); setConfirmDelete(null); }}
+        onCancel={() => setConfirmDelete(null)}
+      />
     </section>
   );
 }

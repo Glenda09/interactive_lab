@@ -1671,10 +1671,7 @@ button {
 }
 
 :root[data-theme="dark"] .auth-shell {
-  background:
-    radial-gradient(circle at 18% 20%, rgba(42, 168, 191, 0.14), transparent 24%),
-    radial-gradient(circle at 72% 36%, rgba(42, 168, 191, 0.12), transparent 22%),
-    linear-gradient(135deg, #091626 0%, #13304e 54%, #0f1928 54%, #111d2d 100%);
+  background: none;
 }
 
 :root[data-theme="dark"] .auth-card-header p,
@@ -1708,9 +1705,7 @@ button {
 
   .auth-shell {
     grid-template-columns: 1fr;
-    background:
-      radial-gradient(circle at top, rgba(46, 197, 206, 0.16), transparent 28%),
-      linear-gradient(180deg, #0e2238 0%, #163a63 34%, #f3f7fb 34%, #eaf2fa 100%);
+    background: none;
   }
 
   .auth-visual-panel,

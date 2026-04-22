@@ -63,29 +63,25 @@ export function LearnLayout() {
           <div className="sidebar-body">
             {!collapsed && <p className="eyebrow" style={{ marginBottom: 4 }}>Área académica</p>}
             <div className="sidebar-nav-group">
-              <ul className="nav-links">
+              <nav className="nav-links">
                 {navLinks.map(link => (
-                  <li key={link.to}>
-                    <NavLink to={link.to} end={link.end} className={({ isActive }) => `nav-link ${isActive ? "is-active" : ""}`}>
-                      <span className="nav-link-icon">{link.icon}</span>
-                      {!collapsed && <span>{link.label}</span>}
-                    </NavLink>
-                  </li>
+                  <NavLink key={link.to} to={link.to} end={link.end} className={({ isActive }) => `nav-link ${isActive ? "is-active" : ""}`}>
+                    <span className="nav-link-icon">{link.icon}</span>
+                    {!collapsed && <span>{link.label}</span>}
+                  </NavLink>
                 ))}
-              </ul>
+              </nav>
             </div>
 
             {isAdmin && (
               <div className="sidebar-nav-group" style={{ marginTop: "auto" }}>
                 {!collapsed && <p className="eyebrow" style={{ marginBottom: 4 }}>Administración</p>}
-                <ul className="nav-links">
-                  <li>
-                    <NavLink to="/admin" className="nav-link admin-nav-link">
-                      <span className="nav-link-icon"><ShieldIcon /></span>
-                      {!collapsed && <span>Panel admin</span>}
-                    </NavLink>
-                  </li>
-                </ul>
+                <nav className="nav-links">
+                  <NavLink to="/admin" className="nav-link admin-nav-link">
+                    <span className="nav-link-icon"><ShieldIcon /></span>
+                    {!collapsed && <span>Panel admin</span>}
+                  </NavLink>
+                </nav>
               </div>
             )}
           </div>

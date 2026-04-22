@@ -3,6 +3,49 @@
    EXTENDED STYLES — Admin pages, Student area, Forms, Modals, Course cards
    ═════════════════════════════════════════════════════════════════════════════ */
 
+/* ─── Simulation Page — Scenario grid ───────────────────────────────────────── */
+.sim-scenario-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+.sim-scenario-card { background: var(--surface-strong); border: 1.5px solid var(--border-soft); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 160ms ease, transform 160ms ease; }
+.sim-scenario-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,24,40,0.12); }
+
+.sim-card-preview { position: relative; height: 140px; background: linear-gradient(135deg, #060e1a 0%, #0d2040 50%, #081628 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.sim-card-babylon-bg { width: 72px; height: 72px; perspective: 200px; }
+.sim-card-cube { width: 48px; height: 48px; transform-style: preserve-3d; animation: cube-spin 8s linear infinite; margin: auto; margin-top: 12px; }
+
+.sim-card-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.sim-card-top-row { display: flex; align-items: center; justify-content: space-between; }
+.sim-card-desc { font-size: 0.84rem; color: var(--ink-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sim-launch-btn { width: 100%; justify-content: center; margin-top: 4px; }
+
+/* ─── Simulation Page — Active scene ────────────────────────────────────────── */
+.sim-active-layout { display: flex; flex-direction: column; gap: 0; height: 100%; }
+
+.sim-active-header { display: flex; align-items: flex-start; gap: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--border-soft); margin-bottom: 16px; flex-wrap: wrap; }
+.sim-back-btn { flex-shrink: 0; }
+.sim-active-meta { flex: 1; }
+.sim-active-meta h2 { font-size: 1.3rem; margin: 4px 0 8px; }
+.sim-active-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.sim-active-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
+
+.sim-canvas-wrapper { border-radius: 20px; overflow: hidden; border: 1.5px solid var(--border-soft); }
+.sim-canvas-wrapper .simulation-canvas { min-height: 480px; border-radius: 0; }
+
+.sim-event-panel { background: var(--surface-strong); border: 1.5px solid var(--border-soft); border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 12px; max-height: 560px; overflow-y: auto; }
+.sim-event-header { display: flex; align-items: center; justify-content: space-between; }
+.sim-event-header h3 { font-size: 0.95rem; font-weight: 700; color: var(--ink-main); }
+.sim-scenario-desc { background: var(--surface-muted); border-radius: 10px; padding: 10px 12px; font-size: 0.83rem; color: var(--ink-muted); line-height: 1.5; }
+.sim-tags-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.sim-tags-row svg { width: 14px; height: 14px; color: var(--brand-accent); flex-shrink: 0; }
+
+.event-empty { font-size: 0.84rem; color: var(--ink-muted); text-align: center; padding: 16px 0; }
+.event-item { display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+.event-item:last-child { border-bottom: none; }
+.event-item-type { font-size: 0.78rem; font-weight: 700; color: var(--brand-accent); text-transform: uppercase; letter-spacing: 0.05em; }
+.event-item-detail { font-size: 0.83rem; color: var(--ink-main); }
+.event-item-time { font-size: 0.75rem; color: var(--ink-muted); }
+
 /* Admin brand in sidebar */
 .admin-brand { display: flex; align-items: center; gap: 10px; }
 .admin-brand-name { font-size: 1rem; font-weight: 700; color: var(--ink-main); line-height: 1.1; }
@@ -32,6 +75,12 @@
 .icon-btn svg { width: 16px; height: 16px; }
 .icon-btn:hover { background: var(--surface-muted); }
 .icon-btn.danger:hover { background: var(--danger-soft); border-color: var(--danger-ink); color: var(--danger-ink); }
+
+.danger-button { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 14px; border: 0; background: linear-gradient(135deg, #b91c1c 0%, #ef4444 100%); color: #fff; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 160ms ease; white-space: nowrap; }
+.danger-button:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(185,28,28,0.3); }
+
+.confirm-dialog-panel { max-width: 420px; }
+.confirm-dialog-body { padding: 4px 0 20px; color: var(--ink-muted); font-size: 0.95rem; line-height: 1.6; }
 
 /* Status chips extra */
 .is-success { background: var(--success-soft); color: var(--success-ink); }
@@ -152,6 +201,9 @@
 .sidebar-user-info { display: flex; align-items: center; gap: 10px; }
 .sidebar-user-name { font-size: 0.88rem; font-weight: 600; color: white; }
 .sidebar-user-role { font-size: 0.72rem; color: rgba(255,255,255,0.55); text-transform: capitalize; }
+.learn-sidebar .sidebar-top { background: linear-gradient(180deg, var(--brand-deep) 72%, rgba(14,34,56,0) 100%); }
+.learn-sidebar .sidebar-toggle { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); }
+.learn-sidebar .sidebar-toggle:hover { background: rgba(255,255,255,0.2); color: white; }
 .learn-sidebar .topbar-logout { color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.2); }
 .learn-sidebar .topbar-logout:hover { background: rgba(255,255,255,0.1); color: white; }
 
@@ -279,6 +331,115 @@
 .nav-link:hover { background: rgba(46,197,206,0.08); color: #163a63; transform: translateX(2px); }
 .nav-link.is-active, .nav-link.active { color: #123a63; background: rgba(46,197,206,0.14); box-shadow: inset 0 0 0 1px rgba(46,197,206,0.1); }
 .nav-link.is-active .nav-link-icon, .nav-link.active .nav-link-icon { background: linear-gradient(135deg, #0e2238 0%, #163a63 72%, #2ec5ce 100%); color: #f4feff; }
+
+/* Login role toggle (legacy, replaced by mode switcher) */
+.login-role-toggle { display: flex; gap: 0; border-radius: 14px; border: 1.5px solid rgba(39,74,118,0.14); overflow: hidden; background: rgba(248,251,255,0.95); }
+.login-role-option { flex: 1; padding: 12px 16px; border: 0; background: transparent; color: #4f6784; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 160ms ease, color 160ms ease; }
+.login-role-option:first-child { border-right: 1px solid rgba(39,74,118,0.1); }
+.login-role-option.is-active { background: linear-gradient(135deg, #0e2238 0%, #163a63 72%, #1e97ae 100%); color: #f4feff; }
+
+/* ── LOGIN DUAL MODE ─────────────────────────────────────────────────────────── */
+
+/* Mode switcher tabs */
+.login-mode-switcher { display: flex; gap: 4px; padding: 5px; border-radius: 16px; background: rgba(18,58,99,0.07); margin-bottom: 4px; }
+.login-mode-btn { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 10px 14px; border: 0; border-radius: 12px; background: transparent; color: #6c84a1; font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 180ms ease; }
+.login-mode-btn svg { width: 16px; height: 16px; }
+.login-mode-btn.is-active { background: white; color: #0e2238; box-shadow: 0 2px 12px rgba(18,46,79,0.12); }
+.auth-card-student .login-mode-btn.is-active { background: linear-gradient(135deg, #0e3a4a 0%, #0a2a38 100%); color: #2ec5ce; box-shadow: 0 2px 12px rgba(0,0,0,0.22); }
+
+/* Submit button variants */
+.login-submit-btn { width: 100%; }
+.login-submit-student { background: linear-gradient(135deg, #1a8fa0 0%, #0e6b7c 60%, #0a4f5c 100%) !important; box-shadow: 0 14px 32px rgba(14,107,124,0.35) !important; }
+.login-submit-student:hover { transform: translateY(-1px); box-shadow: 0 18px 40px rgba(14,107,124,0.45) !important; }
+
+/* Student card overrides */
+.auth-card-student { background: linear-gradient(180deg, #0d1e2e 0%, #112233 100%) !important; border: 1px solid rgba(46,197,206,0.15) !important; box-shadow: 0 32px 80px rgba(0,0,0,0.38) !important; }
+.auth-card-student .auth-card-header p:not(.eyebrow), .auth-card-student .auth-card-header span { color: rgba(200,230,240,0.75); }
+.auth-card-student .auth-field span { color: #a8d8e4; }
+.auth-card-student .auth-field input { background: rgba(255,255,255,0.05) !important; border-color: rgba(46,197,206,0.2) !important; color: #e8f6fa; }
+.auth-card-student .auth-field input::placeholder { color: rgba(150,190,210,0.5); }
+.auth-card-student .auth-field input:focus { border-color: rgba(46,197,206,0.5) !important; box-shadow: 0 0 0 4px rgba(46,197,206,0.12) !important; }
+.auth-card-student .password-visibility-button { color: rgba(46,197,206,0.6); }
+.auth-card-student .text-link { color: #2ec5ce; }
+.auth-card-student .auth-card-footer p { color: rgba(150,190,210,0.6); }
+.auth-card-student .login-mode-switcher { background: rgba(46,197,206,0.08); }
+.auth-card-student .login-mode-btn { color: rgba(46,197,206,0.5); }
+.auth-form-panel-student { background: linear-gradient(160deg, #080f18 0%, #0a1722 100%) !important; }
+
+/* Student logo */
+.student-eyebrow { color: #2ec5ce !important; }
+.student-logo-row { display: flex; align-items: center; gap: 14px; }
+.student-logo-icon { width: 56px; height: 56px; flex-shrink: 0; }
+.student-logo-icon svg { width: 100%; height: 100%; }
+.student-logo-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(46,197,206,0.7); }
+.student-logo-title { display: block; font-size: 1.5rem; line-height: 1; letter-spacing: -0.03em; color: #e8f6fa; }
+.student-welcome-text { color: rgba(180,220,235,0.72) !important; font-size: 0.9rem; }
+
+/* Student features list */
+.student-features { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.student-feature { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: rgba(200,235,245,0.82); }
+.student-feature-dot { width: 8px; height: 8px; border-radius: 50%; background: #2ec5ce; flex-shrink: 0; box-shadow: 0 0 8px rgba(46,197,206,0.7); animation: pulse-glow 2s ease-in-out infinite; }
+.student-feature:nth-child(2) .student-feature-dot { animation-delay: 0.6s; }
+.student-feature:nth-child(3) .student-feature-dot { animation-delay: 1.2s; }
+
+/* Student visual panel */
+.auth-visual-student { position: relative; overflow: hidden; background: radial-gradient(circle at 25% 35%, rgba(46,197,206,0.16), transparent 45%), radial-gradient(circle at 75% 70%, rgba(20,60,100,0.5), transparent 45%), linear-gradient(180deg, #060d16 0%, #091828 50%, #0c2035 100%) !important; }
+.student-copy { position: relative; z-index: 2; }
+.student-tagline { color: #2ec5ce !important; }
+
+/* Student visual bg - particles */
+.student-visual-bg { position: absolute; inset: 0; pointer-events: none; }
+.student-particle { position: absolute; border-radius: 50%; animation: particle-float linear infinite; opacity: 0; }
+.student-particle-1 { width: 6px; height: 6px; background: rgba(46,197,206,0.7); left: 15%; top: 20%; animation-duration: 8s; animation-delay: 0s; }
+.student-particle-2 { width: 4px; height: 4px; background: rgba(46,197,206,0.5); left: 70%; top: 60%; animation-duration: 11s; animation-delay: 2s; }
+.student-particle-3 { width: 8px; height: 8px; background: rgba(100,220,230,0.4); left: 40%; top: 75%; animation-duration: 9s; animation-delay: 4s; }
+.student-particle-4 { width: 3px; height: 3px; background: rgba(46,197,206,0.9); left: 85%; top: 30%; animation-duration: 7s; animation-delay: 1s; }
+.student-particle-5 { width: 5px; height: 5px; background: rgba(46,197,206,0.6); left: 25%; top: 50%; animation-duration: 13s; animation-delay: 3s; }
+.student-particle-6 { width: 7px; height: 7px; background: rgba(100,220,230,0.35); left: 60%; top: 15%; animation-duration: 10s; animation-delay: 5s; }
+
+/* 3D cube scene — decorative, top-right corner */
+.student-3d-scene { position: absolute; top: 32px; right: 32px; width: 110px; height: 110px; z-index: 1; }
+.student-cube { width: 60px; height: 60px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transform-style: preserve-3d; animation: cube-spin 14s linear infinite; }
+.cube-face { position: absolute; width: 60px; height: 60px; border: 1.5px solid rgba(46,197,206,0.5); background: rgba(46,197,206,0.05); }
+.cube-front  { transform: translateZ(30px); }
+.cube-back   { transform: translateZ(-30px) rotateY(180deg); }
+.cube-left   { transform: translateX(-30px) rotateY(-90deg); }
+.cube-right  { transform: translateX(30px) rotateY(90deg); }
+.cube-top    { transform: translateY(-30px) rotateX(90deg); }
+.cube-bottom { transform: translateY(30px) rotateX(-90deg); }
+
+/* Orbiting dots */
+.student-orbit { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 1px dashed rgba(46,197,206,0.25); transform-origin: center; }
+.student-orbit-1 { width: 90px; height: 90px; margin: -45px 0 0 -45px; animation: orbit-spin 6s linear infinite; }
+.student-orbit-2 { width: 118px; height: 118px; margin: -59px 0 0 -59px; animation: orbit-spin 10s linear infinite reverse; }
+.orbit-dot { width: 6px; height: 6px; border-radius: 50%; background: #2ec5ce; box-shadow: 0 0 8px rgba(46,197,206,0.8); position: absolute; top: -3px; left: 50%; margin-left: -3px; }
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.75); }
+}
+@keyframes particle-float {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  10% { opacity: 1; }
+  90% { opacity: 0.8; }
+  100% { opacity: 0; transform: translateY(-180px) scale(1.2); }
+}
+@keyframes cube-spin {
+  0% { transform: translate(-50%, -50%) rotateX(20deg) rotateY(0deg); }
+  100% { transform: translate(-50%, -50%) rotateX(20deg) rotateY(360deg); }
+}
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Remove diagonal from auth-shell, each panel controls its own background */
+.auth-shell { background: none !important; }
+.auth-form-panel { background: linear-gradient(180deg, #f3f7fb 0%, #eaf2fa 100%); }
+
+/* Employee visual panel */
+.auth-visual-employee { background: radial-gradient(circle at 18% 20%, rgba(46,197,206,0.14), transparent 30%), radial-gradient(circle at 80% 80%, rgba(46,197,206,0.08), transparent 30%), linear-gradient(160deg, #0e2238 0%, #163a63 100%) !important; }
 
 /* Responsive */
 @media (max-width: 900px) {

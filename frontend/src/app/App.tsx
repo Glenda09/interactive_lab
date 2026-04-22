@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { createBrowserRouter, NavLink, Navigate, Outlet, RouterProvider, useLocation } from "react-router-dom";
+import { createBrowserRouter, NavLink, Navigate, Outlet, RouterProvider, useLocation, useNavigate } from "react-router-dom";
 import { RequireAuth, RequireGuest } from "../modules/auth/components/AuthGuards";
 import { logoutRequest } from "../modules/auth/lib/auth-api";
 import { ChangePasswordPage } from "../modules/auth/pages/ChangePasswordPage";
@@ -54,9 +54,7 @@ function MenuIcon() {
 function PowerIcon() {
   return <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 2.5v7" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" /><path d="M6 4.8a7 7 0 1 0 8 0" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" /></svg>;
 }
-function LearnIcon() {
-  return <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 3L2 7l8 4 8-4-8-4z" fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="1.7" /><path d="M2 7v6M18 7v6M10 11v6M5 9.5v4.5M15 9.5v4.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" /></svg>;
-}
+
 function SunIcon() {
   return <svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="3.3" fill="none" stroke="currentColor" strokeWidth="1.7" /><path d="M10 1.8v2.4M10 15.8v2.4M18.2 10h-2.4M4.2 10H1.8M15.8 4.2l-1.7 1.7M5.9 14.1l-1.7 1.7M15.8 15.8l-1.7-1.7M5.9 5.9 4.2 4.2" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" /></svg>;
 }
@@ -85,6 +83,7 @@ function AdminLayout() {
     return stored === "dark" ? "dark" : "light";
   });
   const location = useLocation();
+  const navigate = useNavigate();
   const user = useAuthStore((state) => state.user);
   const refreshToken = useAuthStore((state) => state.refreshToken);
   const clearSession = useAuthStore((state) => state.clearSession);
@@ -97,6 +96,7 @@ function AdminLayout() {
   async function handleLogout() {
     if (refreshToken) await logoutRequest({ refreshToken }).catch(() => undefined);
     clearSession();
+    void navigate("/login", { replace: true });
   }
 
   useEffect(() => {
@@ -137,15 +137,6 @@ function AdminLayout() {
               </nav>
             </div>
 
-            <div className="sidebar-nav-group" style={{ marginTop: "auto" }}>
-              {!isSidebarCollapsed && <p className="sidebar-section-label">Área académica</p>}
-              <nav className="nav-links">
-                <NavLink to="/learn" aria-label="Ir al área de estudiantes" title="Área de estudiantes">
-                  <span className="nav-link-icon"><LearnIcon /></span>
-                  {!isSidebarCollapsed && <span>Área estudiante</span>}
-                </NavLink>
-              </nav>
-            </div>
           </div>
         </aside>
 
@@ -248,6 +239,11 @@ const router = createBrowserRouter([
 
 function RootRedirect() {
   const user = useAuthStore(s => s.user);
+  const intended = sessionStorage.getItem("login-destination");
+  if (intended) {
+    sessionStorage.removeItem("login-destination");
+    return <Navigate to={intended} replace />;
+  }
   const isAdmin = user?.roles.includes("platform_admin") || user?.roles.includes("instructor") || user?.roles.includes("supervisor");
   return <Navigate to={isAdmin ? "/admin" : "/learn"} replace />;
 }

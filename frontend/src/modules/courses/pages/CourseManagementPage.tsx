@@ -12,6 +12,8 @@ import {
   getScenarios,
   updateCourse
 } from "../../../shared/lib/api/platform";
+import { ConfirmDialog } from "../../../shared/components/ConfirmDialog";
+import { ModalPortal } from "../../../shared/components/ModalPortal";
 
 const moduleSchema = z.object({
   title: z.string().min(2, "Mínimo 2 caracteres"),
@@ -87,6 +89,7 @@ export function CourseManagementPage() {
   const [editing, setEditing] = useState<CourseResponse | null>(null);
   const [editingModules, setEditingModules] = useState<CourseModuleResponse[]>([]);
   const [filter, setFilter] = useState<"all" | "draft" | "published" | "archived">("all");
+  const [confirmDelete, setConfirmDelete] = useState<CourseResponse | null>(null);
 
   const coursesQuery = useQuery({ queryKey: ["courses"], queryFn: () => getCourses() });
   const scenariosQuery = useQuery({ queryKey: ["scenarios"], queryFn: () => getScenarios() });
@@ -164,7 +167,7 @@ export function CourseManagementPage() {
   function addModule() {
     setEditingModules(prev => [
       ...prev,
-      { title: "Nuevo módulo", description: "", order: prev.length, scenarioId: null, estimatedMinutes: 30, type: "simulation" }
+      { title: "", description: "", order: prev.length, scenarioId: null, estimatedMinutes: 30, type: "simulation" }
     ]);
   }
 
@@ -183,30 +186,6 @@ export function CourseManagementPage() {
 
   return (
     <section className="page-section admin-dashboard">
-      <header className="admin-hero-card">
-        <div className="admin-hero-copy">
-          <p className="eyebrow">Gestión académica</p>
-          <h2>Catálogo de cursos de capacitación 3D</h2>
-          <p>Administra los cursos de la plataforma, sus módulos y escenarios de simulación Babylon.js asociados.</p>
-        </div>
-        <aside className="hero-side-panel">
-          <div className="hero-side-header">
-            <p className="eyebrow">Estadísticas</p>
-          </div>
-          <div className="hero-side-meta">
-            <span>Total de cursos</span>
-            <strong>{courses.length}</strong>
-          </div>
-          <div className="hero-side-meta">
-            <span>Publicados</span>
-            <strong>{courses.filter(c => c.status === "published").length}</strong>
-          </div>
-          <div className="hero-side-meta">
-            <span>En borrador</span>
-            <strong>{courses.filter(c => c.status === "draft").length}</strong>
-          </div>
-        </aside>
-      </header>
 
       <div className="admin-toolbar">
         <div className="filter-tabs">
@@ -227,6 +206,7 @@ export function CourseManagementPage() {
       </div>
 
       {showForm && (
+        <ModalPortal>
         <div className="modal-overlay">
           <div className="modal-panel modal-wide">
             <div className="modal-header">
@@ -377,13 +357,14 @@ export function CourseManagementPage() {
             </form>
           </div>
         </div>
+        </ModalPortal>
       )}
 
       <article className="admin-panel">
         <div className="panel-heading">
           <div>
             <p className="eyebrow">Catálogo de cursos</p>
-            <h3>Todos los cursos ({filtered.length})</h3>
+            <h3>Todos los cursos</h3>
           </div>
         </div>
 
@@ -444,7 +425,7 @@ export function CourseManagementPage() {
                   </button>
                   <button
                     className="icon-btn danger"
-                    onClick={() => { if (confirm(`¿Eliminar "${course.title}"?`)) deleteMutation.mutate(course.id); }}
+                    onClick={() => setConfirmDelete(course)}
                     type="button"
                     title="Eliminar curso"
                   >
@@ -456,6 +437,15 @@ export function CourseManagementPage() {
           </div>
         )}
       </article>
+
+      <ConfirmDialog
+        open={confirmDelete !== null}
+        title="Eliminar curso"
+        message={`¿Estás seguro de que deseas eliminar "${confirmDelete?.title}"? Esta acción no se puede deshacer.`}
+        confirmLabel="Eliminar"
+        onConfirm={() => { if (confirmDelete) deleteMutation.mutate(confirmDelete.id); setConfirmDelete(null); }}
+        onCancel={() => setConfirmDelete(null)}
+      />
     </section>
   );
 }

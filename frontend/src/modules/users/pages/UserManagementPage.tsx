@@ -12,6 +12,8 @@ import {
   sendUserCredentials,
   updateUser
 } from "../../../shared/lib/api/platform";
+import { ConfirmDialog } from "../../../shared/components/ConfirmDialog";
+import { ModalPortal } from "../../../shared/components/ModalPortal";
 
 const userFormSchema = z.object({
   fullName: z.string().min(3, "Ingresa el nombre completo."),
@@ -90,6 +92,7 @@ export function UserManagementPage() {
     tone: "success" | "error";
     text: string;
   } | null>(null);
+  const [confirmInactivate, setConfirmInactivate] = useState<PlatformUserResponse | null>(null);
   const canManageUsers =
     currentUser?.roles.includes("platform_admin") ||
     currentUser?.permissions.some((permission) =>
@@ -319,11 +322,7 @@ export function UserManagementPage() {
   }
 
   function handleInactivate(user: PlatformUserResponse) {
-    if (!window.confirm(`Se inactivara la cuenta de ${user.fullName}. Deseas continuar?`)) {
-      return;
-    }
-
-    inactivateUserMutation.mutate(user.id);
+    setConfirmInactivate(user);
   }
 
   if (!canManageUsers) {
@@ -532,6 +531,7 @@ export function UserManagementPage() {
       </article>
 
       {isUserModalOpen && (
+        <ModalPortal>
         <div className="user-modal-backdrop" onClick={handleCloseModal} role="presentation">
           <article
             aria-modal="true"
@@ -681,7 +681,17 @@ export function UserManagementPage() {
             )}
           </article>
         </div>
+        </ModalPortal>
       )}
+
+      <ConfirmDialog
+        open={confirmInactivate !== null}
+        title="Inactivar usuario"
+        message={`Se inactivará la cuenta de ${confirmInactivate?.fullName}. El usuario no podrá iniciar sesión. ¿Deseas continuar?`}
+        confirmLabel="Inactivar"
+        onConfirm={() => { if (confirmInactivate) inactivateUserMutation.mutate(confirmInactivate.id); setConfirmInactivate(null); }}
+        onCancel={() => setConfirmInactivate(null)}
+      />
     </section>
   );
 }
