@@ -44,10 +44,8 @@ function EmployeeVisualPanel() {
   return (
     <section className="auth-visual-panel auth-visual-employee">
       <div className="auth-visual-copy">
-        <p className="eyebrow auth-visual-eyebrow">Panel de Control</p>
         <h1>Interactive Lab Platform</h1>
         <p className="auth-brand-tagline">Capacita, simula y certifica con confianza.</p>
-        <p>Accede al panel administrativo para gestionar cursos, usuarios y escenarios de simulación 3D.</p>
       </div>
     </section>
   );
@@ -83,7 +81,6 @@ function StudentVisualPanel() {
       </div>
 
       <div className="auth-visual-copy student-copy">
-        <p className="eyebrow auth-visual-eyebrow">Área de Aprendizaje</p>
         <h1>Aprende con Simulación 3D</h1>
         <p className="auth-brand-tagline student-tagline">Explora, practica y certifica.</p>
         <div className="student-features">

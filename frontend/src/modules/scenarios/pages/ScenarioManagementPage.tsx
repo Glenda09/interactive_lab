@@ -204,7 +204,6 @@ export function ScenarioManagementPage() {
           <article key={s.id} className="scenario-card">
             <div className="scenario-card-3d-preview">
               <SceneIcon />
-              <span className="babylon-badge">Babylon.js 8</span>
             </div>
             <div className="scenario-card-body">
               <div className="scenario-card-header">

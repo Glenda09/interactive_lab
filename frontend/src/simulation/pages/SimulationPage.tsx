@@ -171,7 +171,6 @@ export function SimulationPage() {
                   <div className="cube-face cube-bottom" />
                 </div>
               </div>
-              <span className="babylon-badge">Babylon.js 8</span>
             </div>
 
             <div className="sim-card-body">
