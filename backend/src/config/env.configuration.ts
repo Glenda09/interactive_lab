@@ -27,6 +27,11 @@ export default () => ({
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
   },
+  ollama: {
+    baseUrl: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434",
+    apiKey: process.env.OLLAMA_API_KEY ?? "",
+    model: process.env.OLLAMA_MODEL ?? "llava"
+  },
   demoUsers: {
     admin: {
       email: process.env.DEMO_ADMIN_EMAIL ?? "admin@interactive-lab.local",

@@ -13,6 +13,7 @@ import { SimulationSessionsModule } from "./modules/simulation-sessions/simulati
 import { EnrollmentsModule } from "./modules/enrollments/enrollments.module.js";
 import { ProgressModule } from "./modules/progress/progress.module.js";
 import { RolesModule } from "./modules/roles/roles.module.js";
+import { UploadsModule } from "./modules/uploads/uploads.module.js";
 
 @Module({
   imports: [
@@ -34,7 +35,8 @@ import { RolesModule } from "./modules/roles/roles.module.js";
     SimulationSessionsModule,
     EnrollmentsModule,
     ProgressModule,
-    RolesModule
+    RolesModule,
+    UploadsModule
   ],
   controllers: [HealthController]
 })

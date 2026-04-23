@@ -10,6 +10,7 @@ import {
   Query,
   UseGuards
 } from "@nestjs/common";
+import { IsString } from "class-validator";
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from "@nestjs/swagger";
 import { CurrentUser } from "../../shared/auth/current-user.decorator.js";
 import { JwtAuthGuard } from "../../shared/auth/jwt-auth.guard.js";
@@ -17,12 +18,23 @@ import { AuthenticatedUser } from "../../shared/auth/jwt.strategy.js";
 import { CreateScenarioDto } from "./dto/create-scenario.dto.js";
 import { ScenariosService } from "./scenarios.service.js";
 
+class AnalyzeImageDto {
+  @IsString()
+  imageUrl!: string;
+}
+
 @ApiTags("scenarios")
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller("scenarios")
 export class ScenariosController {
   constructor(@Inject(ScenariosService) private readonly scenariosService: ScenariosService) {}
+
+  @Post("analyze-image")
+  @ApiOkResponse({ description: "Análisis de imagen con IA para sugerir configuración 3D." })
+  analyzeImage(@Body() body: AnalyzeImageDto) {
+    return this.scenariosService.analyzeImage(body.imageUrl);
+  }
 
   @Get()
   @ApiOkResponse({ description: "Listado de escenarios 3D." })

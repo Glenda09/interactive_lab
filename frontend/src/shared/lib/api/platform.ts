@@ -86,6 +86,37 @@ export interface ScenarioResponse {
   updatedAt: string | null;
 }
 
+export type SceneType = "electrical_panel" | "irrigation_drip" | "sprinkler" | "water_cycle" | "comparative" | "default" | "custom";
+
+export interface CustomSceneObject {
+  id: string;
+  type: "box" | "cylinder" | "sphere" | "ground";
+  width?: number;
+  height?: number;
+  depth?: number;
+  diameter?: number;
+  position?: [number, number, number];
+  rotation?: [number, number, number];
+  color?: [number, number, number];
+  metallic?: number;
+  roughness?: number;
+  emissive?: [number, number, number];
+  label?: string;
+}
+
+export interface CustomSceneConfig {
+  camera?: { alpha: number; beta: number; radius: number };
+  backgroundColor?: [number, number, number];
+  objects: CustomSceneObject[];
+}
+
+export interface ScenarioAnalysisResult {
+  sceneType: SceneType;
+  confidence: number;
+  description: string;
+  babylonConfig: CustomSceneConfig & Record<string, unknown>;
+}
+
 // ─── Enrollments ──────────────────────────────────────────────────────────────
 export interface EnrollmentResponse {
   id: string;
@@ -236,6 +267,21 @@ export async function updateScenario(id: string, payload: Partial<ScenarioRespon
 
 export async function deleteScenario(id: string) {
   const response = await apiClient.delete<{ message: string }>(`/v1/scenarios/${id}`);
+  return response.data;
+}
+
+// Uploads
+export async function uploadImage(file: File) {
+  const form = new FormData();
+  form.append("file", file);
+  const response = await apiClient.post<{ url: string }>("/v1/uploads/image", form, {
+    headers: { "Content-Type": "multipart/form-data" }
+  });
+  return response.data;
+}
+
+export async function analyzeScenarioImage(imageUrl: string) {
+  const response = await apiClient.post<ScenarioAnalysisResult>("/v1/scenarios/analyze-image", { imageUrl });
   return response.data;
 }
 
